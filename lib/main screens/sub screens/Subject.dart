@@ -12,7 +12,7 @@ class Subject extends StatelessWidget
   String college  ;
 
 
-  Subject(this . name , this . NO , this . DESC , this . previous , this . college);
+  Subject ( this . name , this . NO , this . DESC , this . previous , this . college ) ;
 
 
 

@@ -25,34 +25,33 @@ class Subject extends StatelessWidget
 
       appBar : AppBar
       (
-        title : Container
+        title : Column
         (
-          child: Column(
-            children: [
-              Text
+          children :
+          [
+            Text
+            (
+              "اسم المادة",
+              textAlign: TextAlign . center,
+              style : TextStyle
               (
-                "اسم المادة",
-                textAlign: TextAlign.center,
-                style : TextStyle
-                  (
-                    fontSize : 20,
-                    color : Colors.white,
-                    fontWeight : FontWeight.bold
-                ),
+                fontSize : 20,
+                color : Colors.white,
+                fontWeight : FontWeight.bold
               ),
-              Text
+            ),
+            Text
+            (
+              name,
+              textAlign : TextAlign.  center,
+              style : TextStyle
               (
-                name,
-                textAlign: TextAlign.center,
-                style : TextStyle
-                (
-                  fontSize : 16,
-                  color : Colors.white,
-                  fontWeight : FontWeight.bold
-                ),
+                fontSize : 16,
+                color : Colors.white,
+                fontWeight : FontWeight.bold
               ),
-            ],
-          ),
+            ),
+          ],
         ),
           backgroundColor : Colors . transparent ,
           elevation : 0 ,
@@ -63,16 +62,16 @@ class Subject extends StatelessWidget
       (                   
         builder :  (context , constraints ) => SingleChildScrollView
         (
-          child: ConstrainedBox
+          child : ConstrainedBox
           (
-            constraints: BoxConstraints
+            constraints : BoxConstraints
             (
-              minHeight: constraints . maxHeight
+              minHeight : constraints . maxHeight
             ),
 
-            child: IntrinsicHeight
+            child : IntrinsicHeight
             (
-              child: Container
+              child : Container
               (
                 color : Colors . green . shade900 ,
 
@@ -333,10 +332,10 @@ class Subject extends StatelessWidget
 
                       // بداية وصف المساق
                       Padding
-                        (
+                      (
                         padding :  EdgeInsets . only ( left : 20 , right : 20 , top :15  ),
-                        child: Material
-                          (
+                        child : Material
+                        (
                           borderRadius : BorderRadius . circular ( 50 ),
                           clipBehavior : Clip . antiAliasWithSaveLayer ,
 

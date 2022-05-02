@@ -14,18 +14,7 @@ class Subject extends StatelessWidget
 
   Subject(this . name , this . NO , this . DESC , this . previous , this . college);
 
-/*
-  String Desc ="" ;
-  String subject_sel = "";
 
-
- final String name  ;
- final String NO  ;
- final String DESC  ;
- final String previous  ;
- final String college  ;
-
-  Subject ( this . subject_name , this . subject_NO , this . subject_DESC , this . previous_course_requirement ,  this . subject_college );*/
 
   @override
   Widget build ( BuildContext context )

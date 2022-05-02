@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 class Subject extends StatelessWidget
 {
 
-  String name  = "ds";
-  String NO  = "ds";
+  String name  ;
+  String NO  ;
   String DESC ;
-  String previous  = "ds";
-  String college  = "ds";
+  String previous  ;
+  String college  ;
 
 
   Subject(this . name , this . NO , this . DESC , this . previous , this . college);

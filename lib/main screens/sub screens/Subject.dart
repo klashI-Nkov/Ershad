@@ -1,6 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors , file_names , prefer_const_constructors, must_be_immutable, deprecated_member_use
 
+
+import 'package:ershad/main screens/sub screens/pdf_viewer_page.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
+
 
 class Subject extends StatelessWidget
 {
@@ -381,12 +385,15 @@ class Subject extends StatelessWidget
 
                                   onPressed : ( )
                                   {
-                                    // Navigator.of(context).pushNamed('create account');
+/*                                    final url = 'https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf';
+                                    final file = await Syllabus.loadNetwork(url);
+                                    openPDF(context, file);*/
+                                    Navigator . of ( context ) .pushNamed ( "syllabus" );
 
                                   },
 
                                   child : Text
-                                    (
+                                  (
                                     "خطة المادة",
                                     style : TextStyle
                                     (
@@ -417,7 +424,9 @@ class Subject extends StatelessWidget
 
     );
   }
-
+  void openPDF(BuildContext context, File file) =>
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => PDFViewerPage(file: file)),
+  );
 }
 
 

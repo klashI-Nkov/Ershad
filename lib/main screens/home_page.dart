@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, file_names
 
+import 'package:ershad/main%20screens/specialties%20and%20subjects.dart';
 import 'package:flutter/material.dart';
 
 
@@ -25,16 +26,17 @@ class _Home extends State < Home >
     (
 
       extendBodyBehindAppBar : true,
-      appBar: AppBar
+
+      appBar : AppBar
       (
-        title: Text
+        title  : Text
         (
-           widget . title ,
-          style: TextStyle
+          widget . title ,
+          style : TextStyle
           (
-            fontSize: 42,
-            color: Colors.white,
-            fontWeight: FontWeight.bold
+            fontSize : 42,
+            color : Colors . white,
+            fontWeight : FontWeight . bold
           ),
         ),
         backgroundColor : Colors . transparent ,
@@ -42,294 +44,289 @@ class _Home extends State < Home >
         centerTitle : true ,
       ),
 
-      body : Expanded
+      body : Container
       (
-        child: Container
+
+        decoration : BoxDecoration
         (
-          // width : 360,
-          // height : 752,
-
-          decoration : BoxDecoration
+          image : DecorationImage
           (
-            image : DecorationImage
-            (
-              image : AssetImage ( "pic/pic2.jpg" ),
-              fit : BoxFit . fill,
-              repeat : ImageRepeat . noRepeat,
-            ),
+            image : AssetImage ( "pic/pic2.jpg" ),
+            fit : BoxFit . fill,
+            repeat : ImageRepeat . noRepeat,
           ),
+        ),
 
-          child : Padding
+        child : Padding
+        (
+          padding :  EdgeInsets . only ( top : 90 ),
+          child :  Column
           (
-            padding :  EdgeInsets . only ( top : 90 ),
-            child: Column
-            (
-              mainAxisAlignment : MainAxisAlignment . spaceEvenly,
-              children : <Widget>
-              [
+            mainAxisAlignment : MainAxisAlignment . spaceEvenly,
+            children :
+            [
 
-                // Start Of InkWell التخصصات
-                Opacity
+              // Start Of InkWell التخصصات
+              Opacity
+              (
+                opacity : 0.7 ,
+
+                child : Row
                 (
-                  opacity : 0.7 ,
+                  mainAxisAlignment : MainAxisAlignment . center,
+                  children :
+                  [
 
-                  child: Row
-                  (
-                    mainAxisAlignment : MainAxisAlignment . center,
-                    children : <Widget>
-                    [
+                    InkWell
+                    (
 
-                      InkWell
+                      onTap : ( )
+                      {
+                        Navigator . of ( context ) .pushNamed ( "specialties" );
+                      },
+
+                      child : Container
                       (
-
-                        onTap : ( )
-                        {
-                          Navigator . of ( context ) .
-                          pushNamed ( 'specialties' );
-                        },
-
-                        child : Container
+                        decoration : BoxDecoration
                         (
-                          decoration : BoxDecoration
-                          (
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                          color : Colors . transparent ,
+                          border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                          borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                        ),
+
+                        child : Material
+                        (
+                          color : Colors . black ,
+                          borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 )
                           ),
-                          child: Material
+                          clipBehavior : Clip . antiAliasWithSaveLayer ,
+
+                          child : Ink . image
                           (
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 )
-                            ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
+                            image : AssetImage ( "pic/pic1.png" ),
+                            height : 110,
+                            width : 300,
+                            fit : BoxFit . contain,
 
-                            child : Ink . image
+                            child : Padding
                             (
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
+                              padding :  EdgeInsets . only (  top : 65 , left : 85 ),
 
-                              child : Padding
+                              child : Text
                               (
-                                padding :  EdgeInsets . only (  top : 65 , left : 85 ),
-
-                                child : Text
+                                "التخصصات",
+                                style : TextStyle
                                 (
-                                  "التخصصات",
-                                  style : TextStyle
+                                  fontSize : 35,
+                                  color : Colors . white,
+                                  fontWeight: FontWeight . bold
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+              // End Of InkWell التخصصات
+
+              // Start Of  المدرسين
+              Opacity
+              (
+                opacity : 0.7 ,
+                child: Row
+                (
+                  mainAxisAlignment : MainAxisAlignment . center,
+                  children : <Widget>
+                  [
+
+                    InkWell
+                    (
+                      onTap :  ( )
+                      {
+                        Navigator . of ( context ) . pushNamed ( 'teachers' );
+                      },
+
+                      child : Container
+                        (
+
+                        decoration : BoxDecoration
+                          (
+                          color : Colors . transparent ,
+                          border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                          borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                        ),
+
+                        child: Material
+                          (
+                          color : Colors . black ,
+                          borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                          clipBehavior : Clip . antiAliasWithSaveLayer ,
+
+                          child : Ink . image
+                            (
+                            image : AssetImage ( "pic/pic1.png" ),
+                            height : 110,
+                            width : 300,
+                            fit : BoxFit . contain,
+
+                            child : Padding
+                              (
+                              padding :  EdgeInsets . only ( top : 60 , left : 80  ),
+                              child : Text
+                                (
+                                "المدرسين",
+                                style : TextStyle
                                   (
                                     fontSize : 35,
                                     color : Colors . white,
-                                    fontWeight: FontWeight . bold
-                                  ),
+                                    fontWeight : FontWeight . bold
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
+                    ),
 
-                    ],
-                  ),
+                  ],
                 ),
-                // End Of InkWell التخصصات
+              ),
+              // End Of  المدرسين
 
-                // Start Of  المدرسين
-                Opacity
+              // Start Of InkWell الخارطة
+              Opacity
+              (
+                opacity : 0.7 ,
+                child: Row
                   (
-                  opacity : 0.7 ,
-                  child: Row
-                    (
-                    mainAxisAlignment : MainAxisAlignment . center,
-                    children : <Widget>
-                    [
+                  mainAxisAlignment : MainAxisAlignment . center,
+                  children : <Widget>
+                  [
 
-                      InkWell
+                    InkWell
+                      (
+                      onTap :  ( )
+                      {
+                        Navigator . of ( context ) . pushNamed ( 'map' );
+                      },
+
+                      child : Container
                         (
-                        onTap :  ( )
-                        {
-                          Navigator . of ( context ) . pushNamed ( 'teachers' );
-                        },
 
-                        child : Container
+                        decoration : BoxDecoration
                           (
+                          color : Colors . transparent ,
+                          border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                          borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                        ),
 
-                          decoration : BoxDecoration
+                        child: Material
+                          (
+                          color : Colors . black ,
+                          borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                          clipBehavior : Clip . antiAliasWithSaveLayer ,
+
+                          child : Ink . image
                             (
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                          ),
+                            image : AssetImage ( "pic/pic1.png" ),
+                            height : 110,
+                            width : 300,
+                            fit : BoxFit . contain,
 
-                          child: Material
-                            (
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-                            child : Ink . image
+                            child : Padding
                               (
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              child : Padding
+                              padding :  EdgeInsets . only ( top : 65 , left : 100 ),
+                              child : Text
                                 (
-                                padding :  EdgeInsets . only ( top : 60 , left : 80  ),
-                                child : Text
+                                "الخارطة",
+                                style : TextStyle
                                   (
-                                  "المدرسين",
-                                  style : TextStyle
-                                    (
-                                      fontSize : 35,
-                                      color : Colors . white,
-                                      fontWeight : FontWeight . bold
-                                  ),
+
+                                    fontSize : 35,
+                                    color : Colors . white,
+                                    fontWeight : FontWeight . bold
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
+                    ),
 
-                    ],
-                  ),
+                  ],
                 ),
-                // End Of  المدرسين
+              ),
+              // End Of InkWell الخارطة
 
-                // Start Of InkWell الخارطة
-                Opacity
+              Opacity
+              (
+                opacity : 0.7 ,
+                child: Row
                   (
-                  opacity : 0.7 ,
-                  child: Row
-                    (
-                    mainAxisAlignment : MainAxisAlignment . center,
-                    children : <Widget>
-                    [
+                  mainAxisAlignment : MainAxisAlignment . center,
+                  children : <Widget>
+                  [
+                    // Start Of InkWell التخصصات
+                    InkWell
+                      (
+                      onTap :  ( )
+                      {
+                        Navigator . of ( context ) . pushNamed ( 'personal_lost' );
+                      },
 
-                      InkWell
+                      child : Container
                         (
-                        onTap :  ( )
-                        {
-                          Navigator . of ( context ) . pushNamed ( 'map' );
-                        },
 
-                        child : Container
+                        decoration : BoxDecoration
                           (
+                          color : Colors . transparent ,
+                          border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                          borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                        ),
 
-                          decoration : BoxDecoration
+                        child: Material
+                          (
+                          color : Colors . black ,
+                          borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                          clipBehavior : Clip . antiAliasWithSaveLayer ,
+
+
+                          child : Ink . image
                             (
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                          ),
+                            image : AssetImage ( "pic/pic1.png" ),
+                            height : 110,
+                            width : 300,
+                            fit : BoxFit . contain,
 
-                          child: Material
-                            (
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-                            child : Ink . image
+                            child : Padding
                               (
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              child : Padding
+                              padding :  EdgeInsets . only ( top : 65 , left : 75  ),
+                              child : Text
                                 (
-                                padding :  EdgeInsets . only ( top : 65 , left : 100 ),
-                                child : Text
+                                "المفقودات",
+                                style : TextStyle
                                   (
-                                  "الخارطة",
-                                  style : TextStyle
-                                    (
 
-                                      fontSize : 35,
-                                      color : Colors . white,
-                                      fontWeight : FontWeight . bold
-                                  ),
+                                    fontSize : 35,
+                                    color : Colors . white,
+                                    fontWeight : FontWeight . bold
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-
-                    ],
-                  ),
+                    ),
+                    // End Of InkWell التخصصات
+                  ],
                 ),
-                // End Of InkWell الخارطة
+              ),
 
-                Opacity
-                  (
-                  opacity : 0.7 ,
-                  child: Row
-                    (
-                    mainAxisAlignment : MainAxisAlignment . center,
-                    children : <Widget>
-                    [
-                      // Start Of InkWell التخصصات
-                      InkWell
-                        (
-                        onTap :  ( )
-                        {
-                          Navigator . of ( context ) . pushNamed ( 'personal_lost' );
-                        },
-
-                        child : Container
-                          (
-
-                          decoration : BoxDecoration
-                            (
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                          ),
-
-                          child: Material
-                            (
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-
-                            child : Ink . image
-                              (
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              child : Padding
-                                (
-                                padding :  EdgeInsets . only ( top : 65 , left : 75  ),
-                                child : Text
-                                  (
-                                  "المفقودات",
-                                  style : TextStyle
-                                    (
-
-                                      fontSize : 35,
-                                      color : Colors . white,
-                                      fontWeight : FontWeight . bold
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      // End Of InkWell التخصصات
-                    ],
-                  ),
-                ),
-
-              ],
-            ),
+            ],
           ),
         ),
       ),

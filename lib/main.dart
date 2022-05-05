@@ -2,19 +2,29 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 
-
-import 'package:ershad/main%20screens/home_page.dart';
 import 'package:flutter/material.dart';
 
+import 'package:ershad/main screens/home_page.dart';
+
 import 'package:ershad/main screens/sub screens/Subject.dart';
+
 import 'main screens/specialties and subjects.dart';
+
 import 'main screens/teachers.dart';
+
 import 'main screens/map.dart';
+
 import 'main screens/personal lost.dart';
+
 import 'main screens/sub screens/Login.dart';
+
 import 'main screens/sub screens/Create account.dart';
 
+
+
 void main ( ) =>  runApp ( My ( ) ) ;
+
+
 class My extends StatelessWidget
 {
 

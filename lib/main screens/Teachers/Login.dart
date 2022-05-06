@@ -16,7 +16,7 @@ class Login extends StatefulWidget
 class _Login extends State < Login >
 {
 
-  // Start Of build fum
+  // Start Of build fun
   @override
   Widget build ( BuildContext context )
   {
@@ -24,8 +24,6 @@ class _Login extends State < Login >
     // Start Of Scaffold
     return Scaffold
     (
-
-      backgroundColor : Colors . white,
 
       // Start Of App Bar
       appBar : AppBar
@@ -215,7 +213,7 @@ class _Login extends State < Login >
     // End Of Scaffold
 
   }
-  // End Of build fum
+  // End Of build fun
 
 }
 // End Of _Login Class

@@ -2,55 +2,78 @@
 
 import 'package:flutter/material.dart';
 
+// Start Of Create_Account Class
 class Create_Account extends StatefulWidget
 {
+
   @override
   _Create_Account createState ( ) => _Create_Account ( ) ;
-}
 
+}
+// End Of Create_Account Class
+
+// Start Of _Create_Account Class
 class _Create_Account extends State < Create_Account >
 {
+
+  // Start Of build fun
   @override
-  Widget build(BuildContext context)
+  Widget build ( BuildContext context )
   {
+
+    // Start Of Scaffold
     return Scaffold
     (
 
-      appBar: AppBar
-        (
+      // Start Of App Bar
+      appBar : AppBar
+      (
+
         title: Text("Create New Account Page"),
         backgroundColor : Colors . blueGrey,
         centerTitle : true,
-      ),
 
-      body: Center
+      ),
+      // End Of App Bar
+
+      // Start Of Center
+      body : Center
       (
-        child: SingleChildScrollView
+
+        // Start Of SingleChildScrollView
+        child : SingleChildScrollView
         (
-          child: Container
+
+          // Start Of Container
+          child : Container
           (
-            child: Column
+
+            // Start Of Column
+            child : Column
             (
-              children: <Widget>
+
+              children :
               [
+
                 // Start of Email TextField
                 Padding
                 (
 
-                  padding: const EdgeInsets . only
-                  (
-                      left : 15.0 , right : 15.0 , top : 0 ,bottom : 0
-                  ),
+                  padding: const EdgeInsets . only ( left : 15 , right : 15 ),
 
                   child : TextField
                   (
+
                     decoration : InputDecoration
                     (
+
                       border : OutlineInputBorder ( ),
                       labelText : 'Email',
                       hintText : 'Enter valid email id as abc@gmail.com'
-                    ),
-                  ),
+
+                    )
+
+                  )
 
                 ),
                 // End of Password TextField
@@ -59,20 +82,21 @@ class _Create_Account extends State < Create_Account >
                 Padding
                 (
 
-                  padding : const EdgeInsets . only
-                  (
-                      left : 15.0 , right : 15.0 , top : 15 , bottom : 0
-                  ),
+                  padding : const EdgeInsets . only ( left : 15 , right : 15 , top : 15 ),
 
                   child : TextField
-                  (
+
+                    (
                     decoration : InputDecoration
                     (
+
                       border : OutlineInputBorder ( ),
                       labelText : 'Your Name',
                       hintText : 'Enter valid name'
-                    ),
-                  ),
+
+                    )
+
+                  )
 
                 ),
                 // End of Your Name TextField
@@ -81,21 +105,23 @@ class _Create_Account extends State < Create_Account >
                 Padding
                 (
 
-                  padding : const EdgeInsets . only
-                  (
-                      left : 15.0 , right : 15.0 , top : 15 , bottom : 0
-                  ),
+                  padding : const EdgeInsets . only ( left : 15 , right : 15 , top : 15 ),
 
                   child : TextField
                   (
+
                     obscureText : true,
+
                     decoration : InputDecoration
                     (
+
                       border : OutlineInputBorder ( ),
                       labelText : 'Password',
                       hintText : 'Enter secure password'
-                    ),
-                  ),
+
+                    )
+
+                  )
 
                 ),
                 // End of Password TextField
@@ -104,21 +130,23 @@ class _Create_Account extends State < Create_Account >
                 Padding
                 (
 
-                  padding : const EdgeInsets . only
-                  (
-                      left : 15.0 , right : 15.0 , top : 15 , bottom : 0
-                  ),
+                  padding : const EdgeInsets . only ( left : 15 , right : 15 , top : 15  ),
 
                   child : TextField
                   (
+
                     obscureText : true,
+
                     decoration : InputDecoration
                     (
+
                       border : OutlineInputBorder ( ),
                       labelText : 'Teacher No.',
                       hintText : 'Enter  Student No.'
-                    ),
-                  ),
+
+                    )
+
+                  )
 
                 ),
                 // End of Teacher No TextField
@@ -127,38 +155,61 @@ class _Create_Account extends State < Create_Account >
                 Container
                 (
 
-                  height: 50,
-                  width: 250,
-                  margin :  EdgeInsets . only ( top : 25 ) ,
-                  decoration: BoxDecoration
+                  height : 50,
+                  width : 250,
+
+                  margin :  EdgeInsets . only ( top : 25 ),
+
+                  decoration : BoxDecoration
                   (
-                      color: Colors.blue, borderRadius: BorderRadius.circular(20)
+
+                      color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
+
                   ),
 
                   child : FlatButton
                   (
+
                     onPressed : ( ) { },
 
                     child : Text
                     (
+
                       'Register',
+
                       style : TextStyle
                       (
-                          color : Colors . white, fontSize : 25
-                      ),
-                    ),
-                  ),
 
-                ),
+                          color : Colors . white, fontSize : 25
+
+                      )
+
+                    )
+
+                  )
+
+                )
                 // End Of Register Flat Button
 
-              ],
-            ),
-          ),
-        ),
-      ),
+              ]
+
+            )
+            // End Of Column
+
+          )
+          // End Of Container
+
+        )
+        // End Of SingleChildScrollView
+
+      )
+      // End Of Center
+
     );
+    // End Of Scaffold
+
   }
+  // End Of build fun
+
 }
-
-
+// End Of _Create_Account Class

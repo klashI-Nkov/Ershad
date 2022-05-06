@@ -1,7 +1,10 @@
+// Done
+
 // ignore_for_file: must_be_immutable, deprecated_member_use
 
 import 'package:flutter/material.dart' ;
 
+// Start Of Subject Class
 class Subject extends StatelessWidget
 {
 
@@ -12,14 +15,13 @@ class Subject extends StatelessWidget
  final String college  ;
  final String syllabus ;
 
-
   Subject ( this . name , this . NO , this . DESC , this . previous , this . college , this . syllabus ) ;
 
-
-
+ // Start Of build fun
   @override
   Widget build ( BuildContext context )
   {
+
     return Scaffold
     (
 
@@ -121,6 +123,7 @@ class Subject extends StatelessWidget
 
                           Padding
                           (
+
                             padding : EdgeInsets . only ( bottom : 5 , left : 10 , right : 10 ) ,
 
                             child : Material
@@ -157,7 +160,8 @@ class Subject extends StatelessWidget
                                     // Start Text of رقم المادة
                                     Padding
                                     (
-                                      padding :  EdgeInsets . only (  top : 30  ),
+
+                                      padding :  EdgeInsets . only ( top : 30 ),
 
                                       child : Center
                                       (
@@ -186,12 +190,15 @@ class Subject extends StatelessWidget
                                     // Text of قيمة رقم المادة
                                     Padding
                                     (
+
                                       padding :  EdgeInsets . only ( top : 110 , left :  30 , right : 30 ),
 
                                       child : Center
                                       (
+
                                         child : Text
                                         (
+
                                             NO,
                                             textAlign : TextAlign . center,
 
@@ -229,14 +236,18 @@ class Subject extends StatelessWidget
                       // بداية المتطلب السابق للمادة
                       Column
                       (
+
                         children :
                         [
+
                           Padding
                           (
+
                             padding : EdgeInsets . only ( bottom : 5 , left : 10 , right : 10 ) ,
 
                             child : Material
                             (
+
                               color : Colors . black,
                               borderRadius : BorderRadius . circular ( 200 ),
                               clipBehavior : Clip . antiAliasWithSaveLayer ,
@@ -300,7 +311,7 @@ class Subject extends StatelessWidget
                                     Padding
                                     (
 
-                                      padding :  EdgeInsets . only (  top : 90 , left : 30 , right : 30 ),
+                                      padding :  EdgeInsets . only ( top : 90 , left : 30 , right : 30 ),
 
                                       child : Center
                                       (
@@ -324,7 +335,7 @@ class Subject extends StatelessWidget
 
                                       )
 
-                                    ) ,
+                                    )
                                     // End Text of قيمة المتطلب السابق للمادة
 
                                   ]
@@ -444,7 +455,7 @@ class Subject extends StatelessWidget
 
                                       )
 
-                                    ) ,
+                                    )
                                     // End Text of قيمة كلية المادة
 
                                   ],
@@ -506,7 +517,6 @@ class Subject extends StatelessWidget
 
                                 ),
                                 // End Text of وصف المساق
-
 
                                 // Start Text of نص وصف المساق
                                 Padding
@@ -593,13 +603,7 @@ class Subject extends StatelessWidget
     );
 
   }
+  // End Of build fun
 
 }
-
-
-
-
-
-
-
-
+// End Of Subject Class

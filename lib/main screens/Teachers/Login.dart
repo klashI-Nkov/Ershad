@@ -21,34 +21,32 @@ class _Login extends State < Login >
   Widget build ( BuildContext context )
   {
 
-    // Start Of Scaffold
     return Scaffold
     (
 
-      // Start Of App Bar
+      extendBodyBehindAppBar : true,
+
       appBar : AppBar
       (
 
         title : Text ( "Teachers Login Page" ),
-        backgroundColor : Colors . blueGrey,
-        centerTitle : true,
+        backgroundColor : Colors . transparent ,
+        elevation : 0 ,
+        centerTitle : true ,
 
       ),
-      // End Of App Bar
 
-      // Start Of body
-      body : Center
+      body : Container
       (
 
-        // Start Of SingleChildScrollView
-        child : SingleChildScrollView
+        color : Colors . teal  ,
+
+        child: Center
         (
 
-          // Start Of Container
-          child : Container
+          child : SingleChildScrollView
           (
 
-            // Start Of Column
             child : Column
             (
 
@@ -159,7 +157,11 @@ class _Login extends State < Login >
                     children :
                     [
 
-                    Text ( "New User?" ),
+                    Text
+                    (
+                      "New User?",
+                      style : TextStyle ( fontSize : 25  ),
+                    ),
 
                       FlatButton
                       (
@@ -179,7 +181,7 @@ class _Login extends State < Login >
                           style : TextStyle
                           (
 
-                            color : Colors . blue , fontSize : 15
+                            color : Colors . blue . shade900 , fontSize : 25
 
                           )
 
@@ -198,19 +200,14 @@ class _Login extends State < Login >
               ]
 
             )
-            // End Of Column
 
           )
-          // End Of Container
 
         )
-        // End Of SingleChildScrollView
 
       )
-      // End Of body
 
     );
-    // End Of Scaffold
 
   }
   // End Of build fun

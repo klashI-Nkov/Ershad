@@ -1,18 +1,22 @@
-
 // ignore_for_file: use_key_in_widget_constructors
 
-
-
-import 'package:ershad/main%20screens/home_page.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ershad/main screens/sub screens/Subject.dart';
-import 'main screens/specialties and subjects.dart';
-import 'main screens/teachers.dart';
-import 'main screens/map.dart';
-import 'main screens/personal lost.dart';
-import 'main screens/sub screens/Login.dart';
-import 'main screens/sub screens/Create account.dart';
+import 'package:ershad/main screens/Home Page.dart';
+
+import 'package:ershad/main screens/Specialties And Subjects/specialties and subjects.dart';
+
+// Teachers
+import 'package:ershad/main screens/Teachers/teachers.dart';
+
+import 'package:ershad/main screens/Teachers/Create account.dart';
+
+import 'package:ershad/main screens/Teachers/Login.dart';
+// Teachers
+
+import 'package:ershad/main screens/map.dart';
+
+import 'package:ershad/main screens/personal lost.dart';
 
 void main ( ) =>  runApp (  My ( ) ) ;
 
@@ -25,14 +29,15 @@ class My extends StatelessWidget
   {
     return MaterialApp
     (
-      debugShowCheckedModeBanner : false ,
-      title: "Ershad",
 
-      home: 
+      debugShowCheckedModeBanner : false ,
+      title : "Ershad",
+
+      home :
         
       const Home(title: "title" ),
 
-/*      Subject
+      /*Subject
       (
         "مختبر قواعد البيانات" ,
           "0601242" ,
@@ -44,35 +49,35 @@ class My extends StatelessWidget
       routes:
       {
 
-        'specialties': (context)
+        'specialties' : ( context )
         {
-          return Specialties();
+          return Specialties ( ) ;
         },
 
-        'teachers': (context)
+        'teachers' : ( context )
         {
-          return Teachers();
+          return Teachers ( ) ;
         },
 
-        'map': (context)
+        'map' : ( context )
         {
-          return Map();
+          return Map ( ) ;
         },
 
-        'personal_lost': (context)
+        'personal_lost' : ( context )
         {
-          return Personal_Lost();
+          return Personal_Lost ( ) ;
         },
 
-        'login': (context)
+        'login' : ( context )
         {
-          return Login();
+          return Login ( ) ;
         },
 
-        'create account': (context)
+        'create account' : ( context )
         {
-          return Create_Account();
-        },
+          return Create_Account ( ) ;
+        }
 
       }
 

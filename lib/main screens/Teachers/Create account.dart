@@ -21,34 +21,33 @@ class _Create_Account extends State < Create_Account >
   Widget build ( BuildContext context )
   {
 
-    // Start Of Scaffold
     return Scaffold
     (
 
-      // Start Of App Bar
+      extendBodyBehindAppBar : true,
+
       appBar : AppBar
       (
 
         title: Text("Create New Account Page"),
-        backgroundColor : Colors . blueGrey,
-        centerTitle : true,
+        backgroundColor : Colors . transparent ,
+        elevation : 0 ,
+        centerTitle : true ,
 
       ),
-      // End Of App Bar
 
-      // Start Of Center
-      body : Center
+      body : Container
       (
 
-        // Start Of SingleChildScrollView
-        child : SingleChildScrollView
+        color : Colors .green . shade900 ,
+
+        child : Center
         (
 
-          // Start Of Container
-          child : Container
+          child : SingleChildScrollView
           (
 
-            // Start Of Column
+
             child : Column
             (
 
@@ -59,7 +58,7 @@ class _Create_Account extends State < Create_Account >
                 Padding
                 (
 
-                  padding: const EdgeInsets . only ( left : 15 , right : 15 ),
+                  padding : const EdgeInsets . only ( left : 15 , right : 15 ),
 
                   child : TextField
                   (
@@ -85,8 +84,8 @@ class _Create_Account extends State < Create_Account >
                   padding : const EdgeInsets . only ( left : 15 , right : 15 , top : 15 ),
 
                   child : TextField
+                  (
 
-                    (
                     decoration : InputDecoration
                     (
 
@@ -194,19 +193,15 @@ class _Create_Account extends State < Create_Account >
               ]
 
             )
-            // End Of Column
+
 
           )
-          // End Of Container
 
         )
-        // End Of SingleChildScrollView
 
       )
-      // End Of Center
 
     );
-    // End Of Scaffold
 
   }
   // End Of build fun

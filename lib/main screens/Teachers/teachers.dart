@@ -1,9 +1,6 @@
-// ignore_for_file: unused_import , deprecated_member_use , avoid_web_libraries_in_flutter, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, unnecessary_new, file_names, avoid_unnecessary_containers
+// ignore_for_file: deprecated_member_use
 
-import 'package:ershad/main%20screens/sub%20screens/Login.dart';
 import 'package:flutter/material.dart';
-
-
 
 class Teachers extends StatefulWidget
 {
@@ -40,7 +37,7 @@ class _Teachers extends State < Teachers >
       (
         width : 360,
         height : 672,
-        child: Column
+        child : Column
         (
           crossAxisAlignment : CrossAxisAlignment . stretch,
           mainAxisAlignment : MainAxisAlignment . center,
@@ -52,6 +49,7 @@ class _Teachers extends State < Teachers >
 
               children :
               [
+
                 Column
                 (
 
@@ -134,24 +132,21 @@ class _Teachers extends State < Teachers >
                           color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
                       ),
 
-                      child: FlatButton
+                      child : FlatButton
                         (
 
                         onPressed : ()
                         {
-/*                          Navigator.push
-                            (
-                              context , MaterialPageRoute ( builder : ( _ ) => LogiN ( ) )
-                          );*/
+                          // Navigator . of ( context ) .pushNamed ( "syllabus" );
                         },
 
-                        child: Text
-                          (
+                        child : Text
+                        (
 
                           'Student',
                           style : TextStyle
-                            (
-                              color : Colors . white , fontSize : 25
+                          (
+                            color : Colors . white , fontSize : 25
                           ),
 
                         ),
@@ -164,6 +159,7 @@ class _Teachers extends State < Teachers >
 
                   ],
                 )
+
               ],
             ),
           ],

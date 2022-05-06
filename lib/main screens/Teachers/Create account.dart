@@ -1,7 +1,6 @@
-// ignore_for_file: unused_import , deprecated_member_use , avoid_web_libraries_in_flutter, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, unnecessary_new, file_names, avoid_unnecessary_containers, camel_case_types
+// ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:ershad/main screens/sub screens/Create%20account.dart';
 
 class Create_Account extends StatefulWidget
 {

@@ -1,22 +1,19 @@
-// ignore_for_file: use_key_in_widget_constructors , file_names , prefer_const_constructors, must_be_immutable, deprecated_member_use
+// ignore_for_file: must_be_immutable, deprecated_member_use
 
-
-import 'package:ershad/main screens/sub screens/pdf_viewer_page.dart';
-import 'package:flutter/material.dart';
-import 'dart:io';
-
+import 'package:flutter/material.dart' ;
 
 class Subject extends StatelessWidget
 {
 
-  String name  ;
-  String NO  ;
-  String DESC ;
-  String previous  ;
-  String college  ;
+ final String name  ;
+ final String NO  ;
+ final String DESC ;
+ final String previous  ;
+ final String college  ;
+ final String syllabus ;
 
 
-  Subject ( this . name , this . NO , this . DESC , this . previous , this . college ) ;
+  Subject ( this . name , this . NO , this . DESC , this . previous , this . college , this . syllabus ) ;
 
 
 
@@ -25,56 +22,81 @@ class Subject extends StatelessWidget
   {
     return Scaffold
     (
+
       extendBodyBehindAppBar : true,
 
       appBar : AppBar
       (
+
         title : Column
         (
+
           children :
           [
+
             Text
             (
+
               "اسم المادة",
-              textAlign: TextAlign . center,
+              textAlign : TextAlign . center,
+
               style : TextStyle
               (
+
                 fontSize : 20,
                 color : Colors.white,
                 fontWeight : FontWeight.bold
-              ),
+
+              )
+
             ),
+
             Text
             (
+
               name,
               textAlign : TextAlign.  center,
+
               style : TextStyle
               (
+
                 fontSize : 16,
                 color : Colors.white,
                 fontWeight : FontWeight.bold
-              ),
-            ),
-          ],
+
+              )
+
+            )
+
+          ]
+
         ),
-          backgroundColor : Colors . transparent ,
-          elevation : 0 ,
-          centerTitle : true ,
+
+        backgroundColor : Colors . transparent ,
+        elevation : 0 ,
+        centerTitle : true ,
+
        ),
 
       body : LayoutBuilder
-      (                   
-        builder :  (context , constraints ) => SingleChildScrollView
+      (
+
+        builder :  ( context , constraints ) => SingleChildScrollView
         (
+
           child : ConstrainedBox
           (
+
             constraints : BoxConstraints
             (
+
               minHeight : constraints . maxHeight
+
             ),
 
             child : IntrinsicHeight
             (
+
               child : Container
               (
                 color : Colors . green . shade900 ,
@@ -82,7 +104,6 @@ class Subject extends StatelessWidget
                 child : Padding
                 (
                   padding :  EdgeInsets . only ( top : 100 ),
-
 
                   child : Column
                   (
@@ -94,58 +115,78 @@ class Subject extends StatelessWidget
                       // بداية رقم المادة
                       Column
                       (
-                        children:
+
+                        children :
                         [
+
                           Padding
                           (
-                            padding : EdgeInsets . only ( bottom: 5 , left: 10 , right: 10 ) ,
+                            padding : EdgeInsets . only ( bottom : 5 , left : 10 , right : 10 ) ,
 
-                            child: Material
+                            child : Material
                             (
+
                               color : Colors . black,
                               borderRadius : BorderRadius . circular ( 200 ),
                               clipBehavior : Clip . antiAliasWithSaveLayer ,
 
                               child : Container
                               (
-                                height: 220,
+                                height : 220,
+
                                 decoration : BoxDecoration
                                 (
+
                                   image : DecorationImage
                                   (
+
                                     image : AssetImage ( "pic/pic1.png" ),
                                     fit : BoxFit . fill,
-                                    repeat : ImageRepeat . noRepeat,
-                                  ),
+                                    repeat : ImageRepeat . noRepeat
+
+                                  )
+
                                 ),
 
                                 child : Column
                                 (
+
                                   children :
                                   [
 
+                                    // Start Text of رقم المادة
                                     Padding
                                     (
                                       padding :  EdgeInsets . only (  top : 30  ),
 
                                       child : Center
                                       (
+
                                         child : Text
                                         (
+
                                           "رقم المادة",
+
                                           style : TextStyle
                                           (
-                                              color : Colors . white,
-                                              fontWeight : FontWeight . bold,
-                                              fontSize : 20
-                                          ),
-                                        ),
-                                      ),
-                                    ) ,
 
+                                            color : Colors . white,
+                                            fontWeight : FontWeight . bold,
+                                            fontSize : 20
+
+                                          )
+
+                                        )
+
+                                      )
+
+                                    ) ,
+                                    // End Text of رقم المادة
+
+                                    // Text of قيمة رقم المادة
                                     Padding
                                     (
-                                      padding :  EdgeInsets . only (  top : 110 , left:  30 , right: 30 ),
+                                      padding :  EdgeInsets . only ( top : 110 , left :  30 , right : 30 ),
 
                                       child : Center
                                       (
@@ -153,35 +194,48 @@ class Subject extends StatelessWidget
                                         (
                                             NO,
                                             textAlign : TextAlign . center,
+
                                             style : TextStyle
                                             (
+
                                               color : Colors . white,
                                               fontWeight : FontWeight . bold,
                                               fontSize : 18
-                                            )
-                                        ),
-                                      ),
-                                    ) ,
 
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                                            )
+
+                                        )
+
+                                      )
+
+                                    )
+                                    // Text of قيمة رقم المادة
+
+                                  ]
+
+                                )
+
+                              )
+
+                            )
+
+                          )
+
+                        ]
+
                       ),
                       // نهاية رقم المادة
 
                       // بداية المتطلب السابق للمادة
                       Column
                       (
-                        children:
+                        children :
                         [
                           Padding
                           (
-                            padding : EdgeInsets . only ( bottom: 5 , left: 10 , right: 10 ) ,
+                            padding : EdgeInsets . only ( bottom : 5 , left : 10 , right : 10 ) ,
 
-                            child: Material
+                            child : Material
                             (
                               color : Colors . black,
                               borderRadius : BorderRadius . circular ( 200 ),
@@ -189,245 +243,362 @@ class Subject extends StatelessWidget
 
                               child : Container
                               (
-                                height: 220,
+
+                                height : 220,
+
                                 decoration : BoxDecoration
                                 (
+
                                   image : DecorationImage
                                   (
+
                                     image : AssetImage ( "pic/pic1.png" ),
                                     fit : BoxFit . fill,
-                                    repeat : ImageRepeat . noRepeat,
-                                  ),
+                                    repeat : ImageRepeat . noRepeat
+
+                                  )
+
                                 ),
 
                                 child : Column
                                 (
+
                                   children :
                                   [
 
+                                    // Start Text of المتطلب السابق للمادة
                                     Padding
                                     (
-                                      padding :  EdgeInsets . only (  top : 30  ),
+
+                                      padding :  EdgeInsets . only ( top : 30 ),
 
                                       child : Center
                                       (
+
                                         child : Text
                                         (
+
                                           "المتطلب السابق للمادة",
+
                                           style : TextStyle
                                           (
+
                                             color : Colors . white,
                                             fontWeight : FontWeight . bold,
                                             fontSize : 20
-                                          ),
-                                        ),
-                                      ),
-                                    ) ,
 
+                                          )
+
+                                        )
+
+                                      )
+
+                                    ) ,
+                                    // End Text of المتطلب السابق للمادة
+
+                                    // Start Text of قيمة المتطلب السابق للمادة
                                     Padding
                                     (
-                                      padding :  EdgeInsets . only (  top : 90 , left:  30 , right: 30 ),
+
+                                      padding :  EdgeInsets . only (  top : 90 , left : 30 , right : 30 ),
 
                                       child : Center
                                       (
+
                                         child : Text
                                         (
+
                                             previous,
                                             textAlign : TextAlign . center,
+
                                             style : TextStyle
                                             (
+
                                               color : Colors . white,
                                               fontWeight : FontWeight . bold,
                                               fontSize : 18
-                                            )
-                                        ),
-                                      ),
-                                    ) ,
 
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                                            )
+
+                                        )
+
+                                      )
+
+                                    ) ,
+                                    // End Text of قيمة المتطلب السابق للمادة
+
+                                  ]
+
+                                )
+
+                              )
+
+                            )
+
+                          )
+
+                        ]
+
                       ),
                       // نهاية المتطلب السابق للمادة
 
                       // بداية كلية المادة
                       Column
                       (
-                        children:
+
+                        children :
                         [
+
                           Padding
                           (
-                            padding : EdgeInsets . only ( bottom: 5 , left: 10 , right: 10 ) ,
 
-                            child: Material
+                            padding : EdgeInsets . only ( bottom : 5 , left : 10 , right : 10 ) ,
+
+                            child : Material
                             (
+
                               color : Colors . black,
                               borderRadius : BorderRadius . circular ( 200 ),
                               clipBehavior : Clip . antiAliasWithSaveLayer ,
 
                               child : Container
                               (
-                                height: 220,
+
+                                height : 220,
+
                                 decoration : BoxDecoration
                                 (
+
                                   image : DecorationImage
                                   (
+
                                     image : AssetImage ( "pic/pic1.png" ),
                                     fit : BoxFit . fill,
-                                    repeat : ImageRepeat . noRepeat,
-                                  ),
+                                    repeat : ImageRepeat . noRepeat
+
+                                  )
+
                                 ),
 
                                 child : Column
                                 (
+
                                   children :
                                   [
 
+                                    // Start Text of كلية المادة
                                     Padding
                                     (
-                                      padding :  EdgeInsets . only (  top : 30  ),
+
+                                      padding :  EdgeInsets . only ( top : 30 ),
 
                                       child : Center
                                       (
+
                                         child : Text
                                         (
+
                                           "كلية المادة",
+
                                           style : TextStyle
                                           (
+
                                             color : Colors . white,
                                             fontWeight : FontWeight . bold,
                                             fontSize : 20
-                                          ),
-                                        ),
-                                      ),
-                                    ) ,
 
+                                          )
+
+                                        )
+
+                                      )
+
+                                    ) ,
+                                    // End Text of كلية المادة
+
+                                    // Start Text of قيمة كلية المادة
                                     Padding
                                     (
-                                      padding :  EdgeInsets . only (  top : 90 , left:  30 , right: 30 ),
+
+                                      padding :  EdgeInsets . only ( top : 90 , left :  30 , right : 30 ),
 
                                       child : Center
                                       (
+
                                         child : Text
                                         (
-                                            college,
-                                            textAlign : TextAlign . center,
-                                            style : TextStyle
-                                            (
-                                              color : Colors . white,
-                                              fontWeight : FontWeight . bold,
-                                              fontSize : 18
-                                            )
-                                        ),
-                                      ),
+
+                                          college,
+                                          textAlign : TextAlign . center,
+
+                                          style : TextStyle
+                                          (
+
+                                            color : Colors . white,
+                                            fontWeight : FontWeight . bold,
+                                            fontSize : 18
+
+                                          )
+
+                                        )
+
+                                      )
+
                                     ) ,
+                                    // End Text of قيمة كلية المادة
 
                                   ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                                )
+
+                              )
+
+                            )
+
+                          )
+
+                        ]
+
                       ),
                       // نهاية كلية المادة
 
                       // بداية وصف المساق
                       Padding
                       (
-                        padding :  EdgeInsets . only ( left : 20 , right : 20 , top :15  ),
+
+                        padding :  EdgeInsets . only ( left : 20 , right : 20 , top : 15 ),
+
                         child : Material
                         (
+
                           borderRadius : BorderRadius . circular ( 50 ),
                           clipBehavior : Clip . antiAliasWithSaveLayer ,
 
                           child : Container
                           (
+
                             color : Colors . amber,
+
                             child : Column
                             (
                               children :
                               [
 
+                                // Start Text of وصف المساق
                                 Padding
                                 (
+
                                   padding : EdgeInsets . only ( top: 15 ),
+
                                   child : Text
                                   (
+
                                     "وصف المساق",
+
                                     style : TextStyle
                                     (
+
                                       fontWeight : FontWeight .bold,
                                       fontSize : 25
-                                    ),
-                                  ),
-                                ),
 
+                                    )
+
+                                  )
+
+                                ),
+                                // End Text of وصف المساق
+
+
+                                // Start Text of نص وصف المساق
                                 Padding
                                 (
                                   padding : EdgeInsets . only ( top : 15  , left : 20 , right : 20 ),
+
                                   child : Text
                                   (
+
                                     DESC,
                                     textAlign : TextAlign . right ,
+
                                     style : TextStyle
                                     (
+
                                       fontWeight : FontWeight . bold,
                                       fontSize : 18
-                                    ),
-                                  ),
-                                ),
 
+                                    )
+
+                                  )
+
+                                ),
+                                // End Text of نص وصف المساق
+
+                                // Start OF Link خطة المادة
                                 FlatButton
                                 (
 
-                                  onPressed : ( )
+                                  onPressed : ( ) async
                                   {
-/*                                    final url = 'https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf';
-                                    final file = await Syllabus.loadNetwork(url);
-                                    openPDF(context, file);*/
+
                                     Navigator . of ( context ) .pushNamed ( "syllabus" );
 
                                   },
 
                                   child : Text
                                   (
+
                                     "خطة المادة",
+
                                     style : TextStyle
                                     (
+
                                       color : Colors . blue . shade900 ,
                                       fontSize : 25,
-                                      fontWeight : FontWeight . bold
-                                    ),
-                                  ),
+                                      fontWeight : FontWeight . bold,
+                                      decoration : TextDecoration.underline
 
-                            ),
+                                    )
 
-                              ],
-                            ),
-                          ),
-                        ),
+                                  )
+
+                                )
+                                // End OF Link خطة المادة
+
+                              ]
+
+                            )
+
+                          )
+
+                        )
+
                       )
                       // نهاية وصف المساق
 
-                   ],
-                  ),
+                   ]
 
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
+                  )
+
+                )
+
+              )
+
+            )
+
+          )
+
+        )
+
+      )
 
     );
+
   }
-  void openPDF(BuildContext context, File file) =>
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => PDFViewerPage(file: file)),
-  );
+
 }
+
+
+
+
 
 
 

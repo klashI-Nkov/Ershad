@@ -1,63 +1,69 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, unused_local_variable
 
 import 'package:flutter/material.dart';
 
+import 'package:ershad/main screens/home_page.dart';
 
+// Specialties And Subjects
+import 'package:ershad/main screens/Specialties And Subjects/specialties and subjects.dart';
 
+import 'package:ershad/main screens/Specialties And Subjects/Subject/Subject.dart';
 
+import 'main screens/Specialties And Subjects/Subject/Subject Syllabus.dart';
+// Specialties And Subjects
 
-import 'main screens/teachers.dart';
+// Teachers
+import 'main screens/Teachers/teachers.dart';
+
+import 'package:ershad/main screens/Teachers/Login.dart';
+
+import 'main screens/Teachers/Create account.dart';
+// Teachers
 
 import 'main screens/map.dart';
 
 import 'main screens/personal lost.dart';
 
-import 'main screens/sub screens/Login.dart';
-
-import 'main screens/sub screens/Create account.dart';
-
-import 'package:ershad/main screens/sub screens/Subject.dart';
-
-
-void main ( ) =>  runApp
-  (  My ( ) ) ;
+void main ( ) =>  runApp ( My ( ) ) ;
 
 class My extends StatelessWidget
 {
 
-
   @override
-  Widget build(BuildContext context)
+  Widget build ( BuildContext context )
   {
 
+    final String url = "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf" ;
 
     return MaterialApp
     (
       debugShowCheckedModeBanner : false ,
-      title: "Ershad",
 
-      home:
+      title : "Ershad",
+
+      home :
 
       // Syllabus( ) ,
 
-      // const Home(title: "title" ),
+      const Home ( title : "title" ),
 
-      Subject
+      /*Subject
       (
         "مختبر قواعد البيانات" ,
-          "0601242" ,
+        "0601242" ,
         " هذا المساق هو عبارة عن استكمال او الاصح تطبيق ما تم دراسته في مساق قواعد البيانات وبشكل مختصر هذا المساق يتحدث عن كيفية انشاء قواعد البيانات",
         "قواعد البيانات ( 0601241 )" ,
-        "كلية تكنولوجيا المعلومات والاتصالات"
-      ),
+        "كلية تكنولوجيا المعلومات والاتصالات",
+        url
+      ),*/
 
-      routes:
+      routes :
       {
 
-        /*'specialties' : ( context )
+        'specialties' : ( context )
         {
           return Specialties ( ) ;
-        },*/
+        },
 
         'teachers' : ( context )
         {
@@ -87,7 +93,7 @@ class My extends StatelessWidget
         'syllabus' : ( context )
         {
           return Syllabus ( ) ;
-        },
+        }
 
       }
 

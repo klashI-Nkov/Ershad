@@ -15,6 +15,7 @@ class My extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+
     return MaterialApp
     (
 
@@ -34,10 +35,9 @@ class My extends StatelessWidget
         "كلية تكنولوجيا المعلومات والاتصالات"
       ),*/
 
-
-
-
     );
+
   }
+
 }
 

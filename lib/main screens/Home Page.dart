@@ -4,13 +4,17 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:ershad/main screens/Specialties And Subjects/specialties and subjects.dart';
+
+import 'package:ershad/main screens/Teachers/teachers.dart';
+
+import 'package:ershad/main screens/map.dart';
+
+import 'package:ershad/main screens/personal lost.dart';
+
 // Start Of Home Class
 class Home extends StatefulWidget
 {
-
-  const Home ( { required this . title } )  ;
-
-  final String title;
 
   @override
   State < Home > createState ( ) => _Home ( ) ;
@@ -38,7 +42,7 @@ class _Home extends State < Home >
         title  : Text
         (
 
-          widget . title ,
+          "الرئيسة" ,
 
           style : TextStyle
           (
@@ -110,7 +114,7 @@ class _Home extends State < Home >
                         onTap : ( )
                         {
 
-                          Navigator . of ( context ) .pushNamed ( "specialties" );
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( ) ) ) ;
 
                         },
 
@@ -201,7 +205,7 @@ class _Home extends State < Home >
                         onTap :  ( )
                         {
 
-                          Navigator . of ( context ) . pushNamed ( 'teachers' );
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Teachers ( ) ) ) ;
 
                         },
 
@@ -291,7 +295,7 @@ class _Home extends State < Home >
                         onTap :  ( )
                         {
 
-                          Navigator . of ( context ) . pushNamed ( 'map' );
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Map ( ) ) ) ;
 
                         },
 
@@ -381,7 +385,7 @@ class _Home extends State < Home >
                         onTap :  ( )
                         {
 
-                          Navigator . of ( context ) . pushNamed ( 'personal_lost' ) ;
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Personal_Lost ( ) ) ) ;
 
                         },
 

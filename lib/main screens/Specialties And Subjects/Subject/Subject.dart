@@ -2,7 +2,10 @@
 
 // ignore_for_file: must_be_immutable, deprecated_member_use
 
+
 import 'package:flutter/material.dart' ;
+
+import 'package:ershad/main screens/Specialties And Subjects/Subject/Subject Syllabus.dart';
 
 // Start Of Subject Class
 class Subject extends StatelessWidget
@@ -549,7 +552,7 @@ class Subject extends StatelessWidget
                                   onPressed : ( ) async
                                   {
 
-                                    Navigator . of ( context ) .pushNamed ( "syllabus" );
+                                    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Syllabus ( ) ) ) ;
 
                                   },
 

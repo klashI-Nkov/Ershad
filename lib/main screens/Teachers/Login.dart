@@ -2,7 +2,10 @@
 
 // ignore_for_file: deprecated_member_use
 
+import 'package:ershad/main%20screens/Home%20Page.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ershad/main screens/Teachers/Create account.dart';
 
 // Start Of Login Class
 class Login extends StatefulWidget
@@ -32,9 +35,29 @@ class _Login extends State < Login >
       (
 
         title : Text ( "Teachers Login Page" ),
+
         backgroundColor : Colors . transparent ,
         elevation : 0 ,
         centerTitle : true ,
+
+        actions :
+        [
+
+          IconButton
+          (
+
+            onPressed : ( )
+            {
+
+              Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Home ( ) ) , ( route ) => false ) ;
+
+            },
+
+              icon : Center ( child: Icon ( Icons . home , color : Colors . white , size : 40 ) )
+
+          )
+
+        ]
 
       ),
 
@@ -171,7 +194,7 @@ class _Login extends State < Login >
                         onPressed : ( )
                         {
 
-                          Navigator . of ( context ) . pushNamed ( 'create account' ) ;
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Create_Account ( ) ) ) ;
 
                         },
 

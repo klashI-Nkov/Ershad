@@ -2,7 +2,10 @@
 
 // ignore_for_file: deprecated_member_use
 
+
 import 'package:flutter/material.dart';
+
+import 'package:ershad/main screens/Teachers/Login.dart';
 
 // Start Of Teachers class
 class Teachers extends StatefulWidget
@@ -44,6 +47,7 @@ class _Teachers extends State < Teachers >
           )
 
         ),
+
         backgroundColor : Colors . transparent ,
         elevation : 0 ,
         centerTitle : true ,
@@ -106,7 +110,7 @@ class _Teachers extends State < Teachers >
                       onPressed : ()
                       {
 
-                        Navigator . of ( context ) . pushNamed ( 'login' ) ;
+                        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Login ( ) ) ) ;
 
                       },
 

@@ -2,6 +2,7 @@
 
 // ignore_for_file: deprecated_member_use
 
+import 'package:ershad/main%20screens/Home%20Page.dart';
 import 'package:flutter/material.dart';
 
 // Start Of Create_Account Class
@@ -31,10 +32,30 @@ class _Create_Account extends State < Create_Account >
       appBar : AppBar
       (
 
-        title: Text("Create New Account Page"),
+        title: Text("Create New Account Page" ),
+
         backgroundColor : Colors . transparent ,
         elevation : 0 ,
         centerTitle : true ,
+
+        actions :
+        [
+
+          IconButton
+          (
+
+            onPressed : ( )
+            {
+
+              Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Home ( ) ) , ( route ) => false ) ;
+
+            },
+
+            icon : Center ( child: Icon ( Icons . home , color : Colors . white , size : 40 ) )
+
+          ),
+
+        ]
 
       ),
 

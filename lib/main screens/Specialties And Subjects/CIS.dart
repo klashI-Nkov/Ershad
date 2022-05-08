@@ -3,17 +3,17 @@
 import 'package:flutter/material.dart';
 
 // Start Of Specialties Class
-class Specialties extends StatefulWidget
+class CIS extends StatefulWidget
 {
 
   @override
-  _Specialties createState ( ) => _Specialties ( ) ;
+  _CIS createState ( ) => _CIS ( ) ;
 
 }
 // End Of Specialties Class
 
 // Start Of _Specialties Class
-class _Specialties extends State < Specialties >
+class _CIS extends State < CIS >
 {
 
   // Start Of build fun

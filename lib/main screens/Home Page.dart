@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:ershad/main screens/Specialties And Subjects/specialties and subjects.dart';
+import 'package:ershad/main screens/Specialties And Subjects/CIS.dart';
 
 import 'package:ershad/main screens/Teachers/teachers.dart';
 
@@ -114,7 +114,7 @@ class _Home extends State < Home >
                         onTap : ( )
                         {
 
-                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( ) ) ) ;
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => CIS ( ) ) ) ;
 
                         },
 
@@ -149,17 +149,17 @@ class _Home extends State < Home >
                               child : Padding
                               (
 
-                                padding :  EdgeInsets . only (  top : 65 , left : 85 ),
+                                padding :  EdgeInsets . only (  top : 70 , left : 70 ),
 
                                 child : Text
                                 (
 
-                                  "التخصصات",
+                                  "الكليات و التخصصات",
 
                                   style : TextStyle
                                   (
 
-                                    fontSize : 35,
+                                    fontSize : 25,
                                     color : Colors . white,
                                     fontWeight: FontWeight . bold
 

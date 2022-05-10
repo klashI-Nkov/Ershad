@@ -5,7 +5,7 @@
 
 import 'package:flutter/material.dart' ;
 
-import 'package:ershad/main screens/Specialties And Subjects/Subject/Subject Syllabus.dart';
+import 'package:ershad/main screens/Colleges And Specialties/Subject/Subject Syllabus.dart';
 
 // Start Of Subject Class
 class Subject extends StatelessWidget

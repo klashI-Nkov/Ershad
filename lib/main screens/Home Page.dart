@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:ershad/main screens/Specialties And Subjects/CIS.dart';
+import 'package:ershad/main screens/Colleges And Specialties/CIS.dart';
 
 import 'package:ershad/main screens/Teachers/teachers.dart';
 

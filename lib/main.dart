@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Home Page.dart';
 
-import 'package:ershad/main screens/Specialties And Subjects/Specialties And Subjects.dart';
+import 'package:ershad/main screens/Colleges And Specialties/Colleges And Specialties.dart';
 
-import 'main screens/Specialties And Subjects/Subject/Subject.dart';
+import 'main screens/Colleges And Specialties/Subject/Subject.dart';
 
-import 'package:ershad/main screens/Specialties And Subjects/college.dart';
+import 'package:ershad/main screens/Colleges And Specialties/college.dart';
 
 void main ( ) =>  runApp (  My ( ) ) ;
 
@@ -30,9 +30,9 @@ class My extends StatelessWidget
 
       home :
 
-      College ( )
+      // College ( )
 
-      // specialties ( )
+      specialties ( )
 
        // Home ( )
 

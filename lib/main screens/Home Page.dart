@@ -2,6 +2,7 @@
 
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, file_names
 
+import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Colleges%20And%20Specialties.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Colleges And Specialties/CIS.dart';
@@ -114,7 +115,7 @@ class _Home extends State < Home >
                         onTap : ( )
                         {
 
-                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => CIS ( ) ) ) ;
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => specialties ( ) ) ) ;
 
                         },
 

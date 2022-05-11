@@ -10,7 +10,6 @@ import 'package:ershad/main screens/Colleges And Specialties/Colleges And Specia
 
 import 'main screens/Colleges And Specialties/Subject/Subject.dart';
 
-
 import 'package:ershad/main screens/Colleges And Specialties/college.dart';
 
 void main ( ) =>  runApp (  My ( ) ) ;
@@ -33,9 +32,9 @@ class My extends StatelessWidget
 
       // College ( )
 
-      specialties ( )
+      // specialties ( )
 
-       // Home ( )
+       Home ( )
 
       /*Subject
       (

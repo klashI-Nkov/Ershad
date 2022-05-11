@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 
 
@@ -105,30 +106,9 @@ class College extends StatelessWidget
 
                   ) ,
 
-                  Padding
-                  (
-
-                    padding : EdgeInsets . only ( top : 50 , left : 15 , right : 15 ),
-
-                    child : Container
-                    (
-                      alignment: Alignment . topCenter,
-                      decoration : BoxDecoration
-                      (
-
-                        color : Colors . transparent,
-                        border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                        borderRadius : BorderRadius . circular ( 70 )
-
-                      ),
-
-                      height : 200,
-
-                      child : Container(
-                          // padding: EdgeInsets . only(bottom: 50) ,
-                          child: list_view ( )) ,
-
-                    ),
+                  Padding(
+                    padding : EdgeInsets . only ( top : 1 ) ,
+                    child: list_view ( ),
                   )
 
                 ]
@@ -276,35 +256,42 @@ class College extends StatelessWidget
 
   );
 
-  Widget list_view ( ) => ListView . builder
-  (
+  Widget list_view ( ) => Container
+    (
+    height: 400,
 
-    itemCount : sp . length  ,
-    itemBuilder : ( context , index )
-    {
+    color: Colors.transparent,
 
-      final item = sp [ index ] ;
+    child: ListView . builder
+    (
+      shrinkWrap: true,
+      itemCount : sp . length  ,
+      itemBuilder : ( context , index )
+      {
 
-      return ListTile
-      (
+        final item = sp [ index ] ;
 
-        onTap : ( ) { } ,
-
-        title : Text
+        return ListTile
         (
 
-          item,
+          onTap : ( ) { } ,
 
-          style : TextStyle ( fontSize : 14 , fontWeight : FontWeight . bold ) ,
+          title : Text
+          (
 
-          textAlign : TextAlign.  center,
+            item,
 
-        ),
+            style : TextStyle ( fontSize : 14 , fontWeight : FontWeight . bold ) ,
 
-      );
+            textAlign : TextAlign.  center,
 
-    }
+          ),
 
+        );
+
+      }
+
+    ),
   );
 
 }

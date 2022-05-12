@@ -16,7 +16,7 @@ class CIS extends StatefulWidget
 class _CIS extends State < CIS >
 {
 
-  // Start Of build fun
+  // Start Of build Widget
   @override
   Widget build ( BuildContext context ) => Scaffold
   (
@@ -559,7 +559,7 @@ class _CIS extends State < CIS >
     ),
 
   );
-// End Of build fun
+// End Of build Widget
 
 }
 // End Of _Specialties Class

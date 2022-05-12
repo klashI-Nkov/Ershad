@@ -93,7 +93,7 @@ class _Syllabus extends State < Syllabus >
     );
 
   }
-  // Start Of build fun
+  // Start Of build Widget
 
 }
-// End Of build fun
+// End Of build Widget

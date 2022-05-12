@@ -30,7 +30,7 @@ class _specialties extends State < specialties >
 
   ];
 
-  // Start Of build fun
+  // Start Of build Widget
   @override
   Widget build(BuildContext context)
   {
@@ -83,7 +83,7 @@ class _specialties extends State < specialties >
     );
 
   }
-// End Of build fun
+// End Of build Widget
 
 
 Widget grid_view ( ) => GridView.builder

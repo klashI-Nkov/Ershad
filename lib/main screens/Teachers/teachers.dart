@@ -19,7 +19,7 @@ class Teachers extends StatefulWidget
 class _Teachers extends State < Teachers >
 {
 
-  // Start Of build fun
+  // Start Of build Widget
   @override
   Widget build(BuildContext context)
   {
@@ -200,7 +200,7 @@ class _Teachers extends State < Teachers >
     );
 
   }
-  // End Of build fun
+  // End Of build Widget
 
 }
 // End Of _Teachers class

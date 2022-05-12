@@ -1,11 +1,12 @@
 // Done
 
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, file_names
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, file_names, unused_import
 
-import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Colleges%20And%20Specialties.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Colleges And Specialties/CIS.dart';
+
+import 'package:ershad/main screens/Colleges And Specialties/Colleges And Specialties.dart';
 
 import 'package:ershad/main screens/Teachers/teachers.dart';
 
@@ -27,7 +28,7 @@ class Home extends StatefulWidget
 class _Home extends State < Home >
 {
 
-  // Start Of build fun
+  // Start Of build Widget
   @override
   Widget build(BuildContext context)
   {
@@ -95,364 +96,51 @@ class _Home extends State < Home >
               children :
               [
 
-                // Start Of  التخصصات
-                Opacity
+                // Start Of الكليات و التخصصات
+                sdfa
                 (
-
-                  opacity : 0.7 ,
-
-                  child : Row
-                  (
-
-                    mainAxisAlignment : MainAxisAlignment . center,
-
-                    children :
-                    [
-
-                      InkWell
-                      (
-
-                        onTap : ( )
-                        {
-
-                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => specialties ( ) ) ) ;
-
-                        },
-
-                        child : Container
-                        (
-
-                          decoration : BoxDecoration
-                          (
-
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) )
-
-                          ),
-
-                          child : Material
-                          (
-
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-                            child : Ink . image
-                            (
-
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              // Start Of التخصصات Text
-                              child : Padding
-                              (
-
-                                padding :  EdgeInsets . only (  top : 70 , left : 70 ),
-
-                                child : Text
-                                (
-
-                                  "الكليات و التخصصات",
-
-                                  style : TextStyle
-                                  (
-
-                                    fontSize : 25,
-                                    color : Colors . white,
-                                    fontWeight: FontWeight . bold
-
-                                  )
-
-                                )
-
-                              )
-                              // End Of التخصصات Text
-
-                            )
-
-                          )
-
-                        )
-
-                      )
-
-                    ]
-
-                  )
-
+                  text : "الكليات و التخصصات",
+                  size : 25,
+                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                  Container_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                  Material_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                  top: 72 , left: 80,
                 ),
-                // End Of  التخصصات
+                // End Of  الكليات و التخصصات
 
                 // Start Of  المدرسين
-                Opacity
+                sdfa
                 (
-
-                  opacity : 0.7 ,
-
-                  child: Row
-                  (
-
-                    mainAxisAlignment : MainAxisAlignment . center,
-
-                    children :
-                    [
-
-                      InkWell
-                      (
-
-                        onTap :  ( )
-                        {
-
-                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Teachers ( ) ) ) ;
-
-                        },
-
-                        child : Container
-                        (
-
-                          decoration : BoxDecoration
-                          (
-
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) )
-
-                          ),
-
-                          child : Material
-                          (
-
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-                            child : Ink . image
-                            (
-
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              // Start Of المدرسين Text
-                              child : Padding
-                              (
-
-                                padding :  EdgeInsets . only ( top : 60 , left : 80 ),
-
-                                child : Text
-                                (
-
-                                  "المدرسين",
-
-                                  style : TextStyle
-                                  (
-
-                                    fontSize : 35,
-                                    color : Colors . white,
-                                    fontWeight : FontWeight . bold
-
-                                  )
-
-                                )
-
-                              )
-                              // End Of المدرسين Text
-
-                            )
-
-                          )
-
-                      )
-
-                      )
-
-                    ],
-                  )
-
+                  text : "المدرسين",
+                  size : 35,
+                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                  Container_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                  Material_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                  top: 60 , left: 80,
                 ),
                 // End Of  المدرسين
 
                 // Start Of  الخارطة
-                Opacity
+                sdfa
                 (
-
-                  opacity : 0.7 ,
-
-                  child: Row
-                  (
-
-                    mainAxisAlignment : MainAxisAlignment . center,
-
-                    children :
-                    [
-
-                      InkWell
-                      (
-
-                        onTap :  ( )
-                        {
-
-                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Map ( ) ) ) ;
-
-                        },
-
-                        child : Container
-                        (
-
-                          decoration : BoxDecoration
-                          (
-
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-
-                          ),
-
-                          child: Material
-                          (
-
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-                            child : Ink . image
-                            (
-
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              // Start Of الخارطة Text
-                              child : Padding
-                              (
-
-                                padding :  EdgeInsets . only ( top : 65 , left : 100 ),
-
-                                child : Text
-                                (
-
-                                  "الخارطة",
-
-                                  style : TextStyle
-                                  (
-
-                                    fontSize : 35,
-                                    color : Colors . white,
-                                    fontWeight : FontWeight . bold
-
-                                  )
-
-                                )
-
-                              )
-                              // End Of الخارطة Text
-
-                            )
-
-                          )
-
-                        )
-
-                      )
-
-                    ],
-                )
-
+                  text : "الخارطة",
+                  size : 35,
+                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                  Container_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                  Material_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                  top: 65 , left: 100,
                 ),
                 // End Of  الخارطة
 
                 // Start Of  المفقودات
-                Opacity
+                sdfa
                 (
-
-                  opacity : 0.7 ,
-
-                  child: Row
-                  (
-
-                    mainAxisAlignment : MainAxisAlignment . center,
-
-                    children :
-                    [
-
-                      InkWell
-                      (
-
-                        onTap :  ( )
-                        {
-
-                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Personal_Lost ( ) ) ) ;
-
-                        },
-
-                        child : Container
-                        (
-
-                          decoration : BoxDecoration
-                          (
-
-                            color : Colors . transparent ,
-                            border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-
-                          ),
-
-                          child: Material
-                          (
-
-                            color : Colors . black ,
-                            borderRadius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                            clipBehavior : Clip . antiAliasWithSaveLayer ,
-
-                            child : Ink . image
-                            (
-                              image : AssetImage ( "pic/pic1.png" ),
-                              height : 110,
-                              width : 300,
-                              fit : BoxFit . contain,
-
-                              // Start Of المفقودات Text
-                              child : Padding
-                              (
-
-                                padding :  EdgeInsets . only ( top : 65 , left : 75  ),
-
-                                child : Text
-                                (
-
-                                  "المفقودات",
-
-                                  style : TextStyle
-                                  (
-
-                                    fontSize : 35,
-                                    color : Colors . white,
-                                    fontWeight : FontWeight . bold
-
-                                  )
-
-                                )
-
-                              )
-                              // End Of المفقودات Text
-
-                            )
-
-                          )
-
-                        )
-
-                      )
-
-                    ]
-
-                  )
-
+                  text : "المفقودات",
+                  size : 35,
+                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                  Container_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                  Material_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                  top: 65 , left: 73,
                 )
                 // End Of  المفقودات
 
@@ -469,7 +157,127 @@ class _Home extends State < Home >
     );
 
   }
-  // End Of build fun
+  // End Of build Widget
 
+  Widget sdfa
+      ( {
+          required String text ,
+          required double size ,
+          required BorderRadius Container_Border_Radius ,
+          required Border Container_Border ,
+          required BorderRadius Material_Border_Radius,
+          required double top ,
+          required double left,
+
+      } ) =>
+  Opacity
+  (
+    opacity : 0.7 ,
+    child: Row
+    (
+
+      mainAxisAlignment : MainAxisAlignment . center,
+
+      children :
+      [
+
+        InkWell
+        (
+
+            onTap :  ( )
+            {
+
+              switch (text)
+              {
+
+                case "الكليات و التخصصات" :
+                  {
+                    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => specialties ( ) ) );
+                    break;
+                  }
+
+                case "المدرسين" :
+                  {
+                    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Teachers ( ) ) );
+                    break;
+                  }
+
+                case "الخارطة" :
+                  {
+                    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Map ( ) ) );
+                    break;
+                  }
+
+                case "المفقودات" :
+                  {
+                    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Personal_Lost ( ) ) );
+                    break;
+                  }
+
+              }
+
+            },
+
+            child : Container
+            (
+
+                decoration : BoxDecoration
+                (
+
+                  color : Colors . transparent ,
+                  border : Container_Border,
+                  borderRadius : Container_Border_Radius
+
+                ),
+
+                child: Material
+                (
+
+                    color : Colors . black ,
+                    borderRadius : Material_Border_Radius,
+                    clipBehavior : Clip . antiAliasWithSaveLayer ,
+
+                    child : Ink . image
+                    (
+                        image : AssetImage ( "pic/pic1.png" ),
+                        height : 110,
+                        width : 300,
+                        fit : BoxFit . contain,
+
+                        child : Padding
+                        (
+
+                            padding :  EdgeInsets . only ( top : top , left : left  ),
+
+                            child : Text
+                            (
+
+                                text,
+
+                                style : TextStyle
+                                (
+
+                                  fontSize : size,
+                                  color : Colors . white,
+                                  fontWeight : FontWeight . bold
+
+                                )
+
+                            )
+
+                        )
+
+                    )
+
+                )
+
+            )
+
+        )
+
+      ]
+
+  )
+  );
 }
 // End Of _Home Class

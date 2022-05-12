@@ -21,7 +21,7 @@ class Login extends StatefulWidget
 class _Login extends State < Login >
 {
 
-  // Start Of build fun
+  // Start Of build Widget
   @override
   Widget build ( BuildContext context )
   {
@@ -235,7 +235,7 @@ class _Login extends State < Login >
     );
 
   }
-  // End Of build fun
+  // End Of build Widget
 
 }
 // End Of _Login Class

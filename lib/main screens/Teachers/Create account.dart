@@ -19,7 +19,7 @@ class Create_Account extends StatefulWidget
 class _Create_Account extends State < Create_Account >
 {
 
-  // Start Of build fun
+  // Start Of build Widget
   @override
   Widget build ( BuildContext context )
   {
@@ -227,7 +227,7 @@ class _Create_Account extends State < Create_Account >
     );
 
   }
-  // End Of build fun
+  // End Of build Widget
 
 }
 // End Of _Create_Account Class

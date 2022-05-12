@@ -20,7 +20,7 @@ class Subject extends StatelessWidget
 
   Subject ( this . name , this . NO , this . DESC , this . previous , this . college , this . syllabus ) ;
 
- // Start Of build fun
+ // Start Of build Widget
   @override
   Widget build ( BuildContext context )
   {
@@ -606,7 +606,7 @@ class Subject extends StatelessWidget
     );
 
   }
-  // End Of build fun
+  // End Of build Widget
 
 }
 // End Of Subject Class

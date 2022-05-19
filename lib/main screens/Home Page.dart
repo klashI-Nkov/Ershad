@@ -65,95 +65,97 @@ class _Home extends State < Home >
 
       ),
 
-      body : Expanded
+      body : SingleChildScrollView
       (
-
-        child: Container
+        child : Expanded
         (
 
-          decoration : BoxDecoration
+          child : Container
           (
 
-            image : DecorationImage
+            decoration : BoxDecoration
             (
 
-              image : AssetImage ( "pic/pic2.jpg" ),
-              fit : BoxFit . fill,
-              repeat : ImageRepeat . noRepeat
+              image : DecorationImage
+              (
+
+                image : AssetImage ( "pic/pic2.jpg" ),
+                fit : BoxFit . fill,
+                repeat : ImageRepeat . noRepeat
+
+              )
+
+            ),
+
+            child : Padding
+            (
+
+              padding :  EdgeInsets . only ( top : 90 , bottom : 10 ),
+
+              child :  Column
+              (
+
+
+
+                children :
+                [
+
+                  // Start Of الكليات و التخصصات
+                  sdfa
+                  (
+                    text : "الكليات و التخصصات",
+                    size : 25,
+                    Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                    Container_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                    Material_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                    top: 72 , left: 80,
+                  ),
+                  // End Of  الكليات و التخصصات
+
+                  // Start Of  المدرسين
+                  sdfa
+                  (
+                    text : "المدرسين",
+                    size : 35,
+                    Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                    Container_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                    Material_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                    top: 60 , left: 80,
+                  ),
+                  // End Of  المدرسين
+
+                  // Start Of  الخارطة
+                  sdfa
+                  (
+                    text : "الخارطة",
+                    size : 35,
+                    Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                    Container_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                    Material_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
+                    top: 65 , left: 100,
+                  ),
+                  // End Of  الخارطة
+
+                  // Start Of  المفقودات
+                  sdfa
+                  (
+                    text : "المفقودات",
+                    size : 35,
+                    Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
+                    Container_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                    Material_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
+                    top: 65 , left: 73,
+                  )
+                  // End Of  المفقودات
+
+                ]
+
+              )
 
             )
 
           ),
-
-          child : Padding
-          (
-
-            padding :  EdgeInsets . only ( top : 90 ),
-
-            child :  Column
-            (
-
-              mainAxisAlignment : MainAxisAlignment . spaceEvenly,
-
-              children :
-              [
-
-                // Start Of الكليات و التخصصات
-                sdfa
-                (
-                  text : "الكليات و التخصصات",
-                  size : 25,
-                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                  Container_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                  Material_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                  top: 72 , left: 80,
-                ),
-                // End Of  الكليات و التخصصات
-
-                // Start Of  المدرسين
-                sdfa
-                (
-                  text : "المدرسين",
-                  size : 35,
-                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                  Container_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                  Material_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                  top: 60 , left: 80,
-                ),
-                // End Of  المدرسين
-
-                // Start Of  الخارطة
-                sdfa
-                (
-                  text : "الخارطة",
-                  size : 35,
-                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                  Container_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                  Material_Border_Radius : BorderRadius . only ( topRight : Radius . circular ( 500 ) , bottomLeft : Radius . circular ( 500 ) ),
-                  top: 65 , left: 100,
-                ),
-                // End Of  الخارطة
-
-                // Start Of  المفقودات
-                sdfa
-                (
-                  text : "المفقودات",
-                  size : 35,
-                  Container_Border : Border . all ( color : Colors . blueAccent . shade700 , width : 20 ),
-                  Container_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                  Material_Border_Radius : BorderRadius . only ( topLeft : Radius . circular ( 500 ) , bottomRight : Radius . circular ( 500 ) ),
-                  top: 65 , left: 73,
-                )
-                // End Of  المفقودات
-
-              ]
-
-            )
-
-          )
-
-        )
-
+        ),
       )
 
     );
@@ -175,7 +177,7 @@ class _Home extends State < Home >
   Opacity
   (
     opacity : 0.7 ,
-    child: Row
+    child : Row
     (
 
       mainAxisAlignment : MainAxisAlignment . center,

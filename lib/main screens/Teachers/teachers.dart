@@ -3,8 +3,9 @@
 // ignore_for_file: deprecated_member_use
 
 
-import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Colleges.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ershad/main screens/Colleges And Specialties/Colleges.dart';
 
 import 'package:ershad/main screens/Teachers/Login.dart';
 
@@ -26,182 +27,182 @@ class _Teachers extends State < Teachers >
   {
 
     return Scaffold
+    (
+
+      extendBodyBehindAppBar : true,
+
+      appBar : AppBar
       (
 
-        extendBodyBehindAppBar : true,
+        title : Text
+        (
 
-        appBar : AppBar
+          "المدرسين",
+
+          style : TextStyle
           (
 
-          title : Text
-            (
+            fontSize : 42,
+            color : Colors.white,
+            fontWeight : FontWeight.bold
 
-              "المدرسين",
-
-              style : TextStyle
-                (
-
-                  fontSize : 42,
-                  color : Colors.white,
-                  fontWeight : FontWeight.bold
-
-              )
-
-          ),
-
-          backgroundColor : Colors . transparent ,
-          elevation : 0 ,
-          centerTitle : true ,
+          )
 
         ),
 
-        body : Expanded
+        backgroundColor : Colors . transparent ,
+        elevation : 0 ,
+        centerTitle : true ,
+
+      ),
+
+      body : Expanded
+      (
+
+          child : Container
           (
 
-            child : Container
-              (
+            color : Colors . green . shade900 ,
 
-                color : Colors . green . shade900 ,
+            child : Column
+            (
 
-                child : Column
-                  (
+              crossAxisAlignment : CrossAxisAlignment . stretch,
+              mainAxisAlignment : MainAxisAlignment . center,
 
-                    crossAxisAlignment : CrossAxisAlignment . stretch,
-                    mainAxisAlignment : MainAxisAlignment . center,
+              children :
+              [
 
-                    children :
-                    [
+                Column
+                (
 
-                      Column
+                  children :
+                  [
+
+                    Text
+                    (
+                      "Hi",
+                      style : TextStyle ( fontSize : 50 )
+                    ),
+
+                    Text
+                    (
+                      "Are You",
+                      style : TextStyle ( fontSize : 50 )
+                    ),
+
+                    // Start Of Teacher Button
+                    Container
+                    (
+
+                      height : 50,
+                      width : 250,
+                      margin : EdgeInsets . only ( top : 20 ),
+
+                      decoration : BoxDecoration
+                      (
+
+                        color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
+
+                      ),
+
+                      child : FlatButton
+                      (
+
+                        onPressed : ()
+                        {
+
+                          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Login ( ) ) ) ;
+
+                        },
+
+                        child : Text
                         (
 
-                          children :
-                          [
+                          'Teacher',
 
-                            Text
-                              (
-                                "Hi",
-                                style : TextStyle ( fontSize : 50 )
-                            ),
+                          style : TextStyle
+                          (
 
-                            Text
-                              (
-                                "Are You",
-                                style : TextStyle ( fontSize : 50 )
-                            ),
+                            color : Colors . white,
+                            fontSize : 25
 
-                            // Start Of Teacher Button
-                            Container
-                              (
+                          )
 
-                                height : 50,
-                                width : 250,
-                                margin : EdgeInsets . only ( top : 20 ),
-
-                                decoration : BoxDecoration
-                                  (
-
-                                    color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
-
-                                ),
-
-                                child : FlatButton
-                                  (
-
-                                    onPressed : ()
-                                    {
-
-                                      Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Login ( ) ) ) ;
-
-                                    },
-
-                                    child : Text
-                                      (
-
-                                        'Teacher',
-
-                                        style : TextStyle
-                                          (
-
-                                            color : Colors . white,
-                                            fontSize : 25
-
-                                        )
-
-                                    )
-
-                                )
-
-
-                            ),
-                            // End Of Teacher Button
-
-                            Text
-                              (
-                                "\nOr",
-                                style : TextStyle ( fontSize : 50 )
-                            ),
-
-                            // Start Of Student Button
-                            Container
-                              (
-
-                                height : 50,
-                                width : 250,
-                                margin : EdgeInsets . only ( top : 20 ),
-
-                                decoration : BoxDecoration
-                                  (
-
-                                    color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
-
-                                ),
-
-                                child : FlatButton
-                                  (
-
-                                    onPressed : ()
-                                    {
-                                      Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Colleges ( ) ) ) ;
-                                    },
-
-                                    child : Text
-                                      (
-
-                                        'Student',
-
-                                        style : TextStyle
-                                          (
-
-                                            color : Colors . white,
-                                            fontSize : 25
-
-                                        )
-
-                                    )
-
-                                )
-
-
-                            )
-                            // End Of Student Button
-
-                          ]
+                        )
 
                       )
 
-                    ]
+
+                    ),
+                    // End Of Teacher Button
+
+                    Text
+                    (
+                      "\nOr",
+                      style : TextStyle ( fontSize : 50 )
+                    ),
+
+                    // Start Of Student Button
+                    Container
+                    (
+
+                        height : 50,
+                        width : 250,
+                        margin : EdgeInsets . only ( top : 20 ),
+
+                        decoration : BoxDecoration
+                        (
+
+                          color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
+
+                        ),
+
+                        child : FlatButton
+                        (
+
+                          onPressed : ()
+                          {
+                            Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Colleges ( ) ) ) ;
+                          },
+
+                          child : Text
+                          (
+
+                            'Student',
+
+                            style : TextStyle
+                            (
+
+                              color : Colors . white,
+                              fontSize : 25
+
+                            )
+
+                          )
+
+                        )
+
+
+                    )
+                    // End Of Student Button
+
+                  ]
 
                 )
 
+              ]
+
             )
 
-        )
+          )
+
+      )
 
     );
 
   }
-// End Of build Widget
+  // End Of build Widget
 
 }
 // End Of _Teachers class

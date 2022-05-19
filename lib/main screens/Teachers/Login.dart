@@ -2,8 +2,11 @@
 
 // ignore_for_file: deprecated_member_use
 
-import 'package:ershad/main%20screens/Home%20Page.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ershad/main screens/Home Page.dart';
+
+import 'package:ershad/main%20screens/Teachers/Control/Control.dart';
 
 // Start Of Login Class
 class Login extends StatefulWidget
@@ -25,155 +28,154 @@ class _Login extends State < Login >
   {
 
     return Scaffold
+    (
+
+      extendBodyBehindAppBar : true,
+
+      appBar : AppBar
       (
 
-        extendBodyBehindAppBar : true,
+        title : Text ( "Teachers Login Page" ),
 
-        appBar : AppBar
+        backgroundColor : Colors . transparent ,
+        elevation : 0 ,
+        centerTitle : true ,
+
+        actions :
+        [
+
+          IconButton
           (
 
-            title : Text ( "Teachers Login Page" ),
+            onPressed : ( )
+            {
 
-            backgroundColor : Colors . transparent ,
-            elevation : 0 ,
-            centerTitle : true ,
+              Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Home ( ) ) , ( route ) => false ) ;
 
-            actions :
-            [
+            },
 
-              IconButton
+            icon : Center ( child: Icon ( Icons . home , color : Colors . white , size : 40 ) )
+
+          )
+
+        ]
+
+      ),
+
+      body : Container
+      (
+
+        color : Colors . teal  ,
+
+        child : Column
+        (
+
+          mainAxisAlignment : MainAxisAlignment . center,
+
+          children :
+          [
+
+            // Start of Email TextField
+            Padding
+            (
+
+              padding : EdgeInsets . symmetric ( horizontal : 15 ),
+
+              child : TextField
+              (
+
+                decoration : InputDecoration
                 (
 
-                  onPressed : ( )
-                  {
+                  border : OutlineInputBorder ( ),
+                  labelText : 'Email',
+                  hintText : 'Enter valid email id as abc@gmail.com'
 
-                    Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Home ( ) ) , ( route ) => false ) ;
-
-                  },
-
-                  icon : Center ( child: Icon ( Icons . home , color : Colors . white , size : 40 ) )
+                )
 
               )
 
-            ]
+            ),
+            // End of Email TextField
 
-        ),
+            // Start of Password TextField
+            Padding
+            (
 
-        body : Container
-          (
+              padding : const EdgeInsets . only ( left : 15.0 , right : 15.0 , top : 15),
 
-            color : Colors . teal  ,
-
-            child : Column
+              child : TextField
               (
 
-                mainAxisAlignment : MainAxisAlignment . center,
+                obscureText : true,
 
-                children :
-                [
+                decoration : InputDecoration
+                (
 
-                  // Start of Email TextField
-                  Padding
-                    (
+                  border : OutlineInputBorder ( ),
+                  labelText : 'Password',
+                  hintText : 'Enter secure password'
 
-                      padding : EdgeInsets . symmetric ( horizontal : 15 ),
+                )
 
-                      child : TextField
-                        (
+              )
 
-                          decoration : InputDecoration
-                            (
+            ),
+            // End of Password TextField
 
-                              border : OutlineInputBorder ( ),
-                              labelText : 'Email',
-                              hintText : 'Enter valid email id as abc@gmail.com'
+            // Start Of Login Button
+            Container
+            (
 
-                          )
+              height : 50,
+              width : 250,
+              margin : EdgeInsets . only ( top : 20 ),
 
-                      )
+              decoration : BoxDecoration
+              (
 
-                  ),
-                  // End of Email TextField
+                color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
 
-                  // Start of Password TextField
-                  Padding
-                    (
+              ),
 
-                      padding : const EdgeInsets . only ( left : 15.0 , right : 15.0 , top : 15),
+              child : FlatButton
+              (
 
-                      child : TextField
-                        (
-                          obscureText : true,
+                onPressed : ()
+                {
+                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Control ( ) ) ) ;
+                },
 
-                          decoration : InputDecoration
-                            (
+                child : Text
+                (
 
-                              border : OutlineInputBorder ( ),
-                              labelText : 'Password',
-                              hintText : 'Enter secure password'
+                  'Login',
 
-                          )
+                  style : TextStyle
+                  (
 
-                      )
+                    color : Colors . white , fontSize : 25
 
-                  ),
-                  // End of Password TextField
+                  )
 
-                  // Start Of Login Button
-                  Container
-                    (
+                )
 
-                      height : 50,
-                      width : 250,
-                      margin : EdgeInsets . only ( top : 20 ),
-
-                      decoration : BoxDecoration
-                        (
-
-                          color : Colors . blue , borderRadius : BorderRadius . circular ( 20 )
-
-                      ),
-
-                      child : FlatButton
-                        (
-
-                          onPressed : ()
-                          {
-
-                          },
-
-                          child : Text
-                            (
-
-                              'Login',
-
-                              style : TextStyle
-                                (
-
-                                  color : Colors . white , fontSize : 25
-
-                              )
-
-                          )
-
-                      )
+              )
 
 
-                  ),
-                  // End Of Login Button
+            ),
+            // End Of Login Button
 
-
-
-                ]
-
-            )
+          ]
 
         )
+
+      )
 
     );
 
   }
-// End Of build Widget
+  // End Of build Widget
 
 }
 // End Of _Login Class

@@ -1,6 +1,6 @@
 // Start Of Syllabus Class
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+// import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class Syllabus extends StatefulWidget
 {
@@ -15,17 +15,17 @@ class Syllabus extends StatefulWidget
 class _Syllabus extends State < Syllabus >
 {
 
-  late PdfViewerController _pdfViewerController ;
+  // late PdfViewerController _pdfViewerController ;
   String ? url ;
 
-  @override
-  void initState ( )
-  {
-
-    _pdfViewerController = PdfViewerController ( ) ;
-    super . initState ( ) ;
-
-  }
+  // @override
+  // void initState ( )
+  // {
+  //
+  //   _pdfViewerController = PdfViewerController ( ) ;
+  //   super . initState ( ) ;
+  //
+  // }
 
   // Start Of _Home Class
   @override
@@ -50,7 +50,7 @@ class _Syllabus extends State < Syllabus >
                       onPressed : ( )
                       {
 
-                        _pdfViewerController . jumpToPage ( 4 ) ;
+                        // _pdfViewerController . jumpToPage ( 4 ) ;
 
                       },
 
@@ -64,7 +64,7 @@ class _Syllabus extends State < Syllabus >
                       onPressed : ( )
                       {
 
-                        _pdfViewerController . zoomLevel = 1.25 ;
+                        // _pdfViewerController . zoomLevel = 1.25 ;
 
                       },
 
@@ -76,13 +76,13 @@ class _Syllabus extends State < Syllabus >
 
             ),
 
-            body : SfPdfViewer . network
+          /*  body : SfPdfViewer . network
               (
 
               url! ,
               controller : _pdfViewerController ,
 
-            )
+            )*/
 
         )
 

@@ -1,7 +1,10 @@
-// Start Of college Class
-import 'package:ershad/main%20screens/Home%20Page.dart';
+
+
 import 'package:flutter/material.dart';
 
+import 'package:ershad/main screens/Home Page.dart';
+
+// Start Of Specialties Class
 class Specialties extends StatefulWidget
 {
 
@@ -10,21 +13,20 @@ class Specialties extends StatefulWidget
 
   Specialties ( { required this . title ,  required this . sp } ) ;
 
-
   @override
   State< Specialties > createState ( ) => _Specialties ( title : title , sp :  sp ) ;
 
 }
-// End Of college Class
+// End Of Specialties Class
 
-// Start Of _college Class
+// Start Of _Specialties Class
 class _Specialties extends State< Specialties >
 {
 
   final String title ;
   final List < String > sp  ;
 
-  _Specialties ( { required this . title ,  required this . sp } ) ;
+  _Specialties ( { required this . title , required this . sp } ) ;
 
   List < Card_Item > items =
   [
@@ -38,152 +40,147 @@ class _Specialties extends State< Specialties >
 
   ];
 
-
-  @override
-  void initState()
-  {
-    // TODO: implement initState
-    super.initState();
-  }
-
   @override
   Widget build ( BuildContext context )
   {
 
     return Scaffold
-      (
+    (
 
       // extendBodyBehindAppBar : true,
 
-        appBar : AppBar
+      appBar : AppBar
+      (
+
+        title  : Text
+        (
+
+          title,
+
+          style : TextStyle
           (
 
-            title  : Text
-              (
+            fontSize : 20,
+            color : Colors . white,
+            fontWeight : FontWeight . bold
 
-                title,
+          )
 
-                style : TextStyle
-                  (
+          ),
 
-                    fontSize : 20,
-                    color : Colors . white,
-                    fontWeight : FontWeight . bold
+        backgroundColor : Colors . green . shade900 ,
+        elevation : 0 ,
+        centerTitle : true ,
 
-                )
+        actions :
+        [
+
+          IconButton
+          (
+
+            onPressed : ( )
+            {
+
+              Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Home ( ) ) , ( route ) => false ) ;
+
+            },
+
+            icon : Center ( child: Icon ( Icons . home , color : Colors . white , size : 40 ) )
+
+          )
+
+        ]
+
+      ),
+
+      body : LayoutBuilder
+      (
+
+        builder : ( context , constraints ) => SingleChildScrollView
+        (
+
+          child : ConstrainedBox
+          (
+
+            constraints : BoxConstraints
+            (
+
+              minHeight : constraints . maxHeight
 
             ),
 
-            backgroundColor : Colors . green . shade900 ,
-            elevation : 0 ,
-            centerTitle : true ,
+            child : Container
+            (
 
-            actions :
-            [
+              color : Colors . green . shade900 ,
 
-              IconButton
-                (
-
-                  onPressed : ( )
-                  {
-
-                    Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Home ( ) ) , ( route ) => false ) ;
-
-                  },
-
-                  icon : Center ( child: Icon ( Icons . home , color : Colors . white , size : 40 ) )
-
-              )
-
-            ]
-
-        ),
-
-        body : LayoutBuilder
-          (
-
-            builder : ( context , constraints ) => SingleChildScrollView
+              child : Column
               (
 
-                child : ConstrainedBox
+                children :
+                [
+
+                  Container
                   (
 
-                    constraints : BoxConstraints
-                      (
+                    height : 160,
+                    color: Colors . transparent,
 
-                        minHeight : constraints . maxHeight
+                    child : ListView . separated
+                    (
 
-                    ),
-
-                    child : Container
-                      (
-
-                        color : Colors . green . shade900 ,
-
-                        child : Column
-                          (
-
-                            children :
-                            [
-
-                              Container
-                                (
-
-                                  height : 160,
-                                  color: Colors . transparent,
-
-                                  child : ListView . separated
-                                    (
-
-                                    padding : EdgeInsets . only ( left : 10 , right : 10 , top : 0 ) ,
-                                    scrollDirection : Axis . horizontal ,
-                                    separatorBuilder : ( context , _ ) => SizedBox ( width : 12) ,
-                                    itemCount : items . length ,
-                                    itemBuilder : ( context , index ) => buildCard ( item : items [ index ]  , context : context) ,
-
-                                  )
-
-                              ) ,
-
-                              /*Padding(
-                                padding: EdgeInsets . only( top: 15 , left: 20 , right: 20),
-                                child: Container
-                                (
-
-                                decoration: BoxDecoration
-                                (
-                                  border:Border.all(color: Colors. blueAccent.shade700 , width: 15),
-                                  borderRadius: BorderRadius.circular(50)
-                                 ),
-                                  height: 410,
-
-                                  child: list_view(),
-
-                                ),
-                              )*/
-
-
-
-
-
-                            ]
-
-                        )
+                      padding : EdgeInsets . only ( left : 10 , right : 10 , top : 0 ) ,
+                      scrollDirection : Axis . horizontal ,
+                      separatorBuilder : ( context , _ ) => SizedBox ( width : 12) ,
+                      itemCount : items . length ,
+                      itemBuilder : ( context , index ) => buildCard ( item : items [ index ]  , context : context) ,
 
                     )
 
-                )
+                  ) ,
+
+                  Padding
+                  (
+
+                    padding : EdgeInsets . only ( top : 15 , left : 20 , right : 20 ),
+
+                    child : Container
+                    (
+
+                      decoration : BoxDecoration
+                      (
+
+                        border : Border . all ( color : Colors . blueAccent.shade700 , width : 15 ),
+                        borderRadius : BorderRadius . circular ( 50 )
+
+                       ),
+
+                      height : 410,
+
+                      child : list_view ( ),
+
+                    )
+
+                  )
+
+                ]
+
+              )
 
             )
 
+          )
+
         )
+
+      )
 
     );
 
   }
 
   Widget buildCard ( { required Card_Item item , required BuildContext context } ) => InkWell
-    (
+  (
 
     // Start Of On Tap
     /*onTap : ()
@@ -253,90 +250,90 @@ class _Specialties extends State< Specialties >
     },*/
     // End Of On Tap
 
-      child : Container
+    child : Container
+    (
+
+      width : 165,
+
+      decoration : BoxDecoration
+      (
+
+        borderRadius : BorderRadius . circular ( 70 ),
+        image : DecorationImage
         (
 
-          width : 165,
+          image : AssetImage ( "pic/pic1.png" ),
+          fit : BoxFit . fill,
 
-          decoration : BoxDecoration
+        )
+
+      ),
+
+      child : Center
+      (
+
+        child : Padding
+        (
+
+          padding :  EdgeInsets . only ( top : 110 ),
+
+          child : Text
+          (
+
+            item . text,
+
+            style : TextStyle
             (
 
-              borderRadius : BorderRadius . circular ( 70 ),
-              image : DecorationImage
-                (
+              color : Colors . white
 
-                image : AssetImage ( "pic/pic1.png" ),
-                fit : BoxFit . fill,
+            ),
 
-              )
-
-          ),
-
-          child : Center
-            (
-
-              child : Padding
-                (
-
-                  padding :  EdgeInsets . only ( top : 110 ),
-
-                  child : Text
-                    (
-
-                    item . text,
-
-                    style : TextStyle
-                      (
-
-                        color : Colors . white
-
-                    ),
-
-                    textAlign : TextAlign . center ,
-
-                  )
-
-              )
+            textAlign : TextAlign . center ,
 
           )
 
+        )
+
       )
+
+    )
 
   );
 
   Widget list_view ( ) => ListView . builder
-    (
+  (
 
-      itemCount : sp . length  ,
-      itemBuilder : ( context , index )
-      {
+    itemCount : sp . length  ,
+    itemBuilder : ( context , index )
+    {
 
-        final item = sp [ index ] ;
+      final item = sp [ index ] ;
 
-        return ListTile
-          (
+      return ListTile
+      (
 
-            onTap : ( ) { } ,
+        onTap : ( ) { } ,
 
-            title : Text
-              (
+        title : Text
+        (
 
-              item,
+          item,
 
-              style : TextStyle ( fontSize : 20 ,color: Colors.black, fontWeight : FontWeight . bold ) ,
+          style : TextStyle ( fontSize : 20 ,color: Colors.black, fontWeight : FontWeight . bold ) ,
 
-              textAlign : TextAlign.  center,
+          textAlign : TextAlign.  center,
 
-            )
+        )
 
-        );
+      );
 
-      }
+    }
 
   );
 
   Widget TxT ( { required String txt } ) =>  Padding
-    (
+  (
 
       padding : EdgeInsets.only ( bottom : 10 ),
 
@@ -359,7 +356,7 @@ class _Specialties extends State< Specialties >
   );
 
 }
-// End Of _college Class
+// End Of _Specialties Class
 
 // Start Of Card_Item Class
 class Card_Item

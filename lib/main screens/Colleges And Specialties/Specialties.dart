@@ -1,4 +1,5 @@
 
+// ignore_for_file: dead_code, must_be_immutable
 
 import 'package:flutter/material.dart';
 
@@ -28,18 +29,19 @@ class _Specialties extends State< Specialties >
 
   _Specialties ( { required this . title , required this . sp } ) ;
 
-  List < Card_Item > items =
+  List < String > items =
   [
 
-    Card_Item ( text : "كلية الهندسة" ),
-    Card_Item ( text : "كلية العلوم" ),
-    Card_Item ( text : "كلية تكنولوجيا المعلومات و الاتصالات" ),
-    Card_Item ( text : "كلية الاعمال" ),
-    Card_Item ( text : "كلية الاداب" ),
-    Card_Item ( text : "كلية العلوم التربوية" ),
+    "كلية الهندسة",
+    "كلية العلوم",
+    "كلية تكنولوجيا المعلومات و الاتصالات",
+    "كلية الاعمال",
+    "كلية الاداب",
+    "كلية العلوم التربوية"
 
   ];
 
+  // Start of build Widget
   @override
   Widget build ( BuildContext context )
   {
@@ -47,7 +49,7 @@ class _Specialties extends State< Specialties >
     return Scaffold
     (
 
-      // extendBodyBehindAppBar : true,
+      extendBodyBehindAppBar : true,
 
       appBar : AppBar
       (
@@ -93,83 +95,190 @@ class _Specialties extends State< Specialties >
 
       ),
 
-      body : LayoutBuilder
+      body : Container
       (
 
-        builder : ( context , constraints ) => SingleChildScrollView
+        color : Colors . green . shade900 ,
+
+        child : Column
         (
 
-          child : ConstrainedBox
-          (
+          children :
+          [
 
-            constraints : BoxConstraints
+            Row
             (
 
-              minHeight : constraints . maxHeight
+              children :
+              [
+
+                Container
+                (
+
+                  width : 410,
+
+                  child :  Stack
+                  (
+
+                    children :
+                    [
+
+                      Container
+                      (
+
+                        height : 255,
+                        color : Colors . transparent,
+                        padding : EdgeInsets . only ( top : 90 ),
+
+                        child : ListView . separated
+                        (
+
+                          padding : EdgeInsets . only ( left : 10 , right : 10 , top : 0 ) ,
+                          scrollDirection : Axis . horizontal ,
+                          separatorBuilder : ( context , _ ) => SizedBox ( width : 12) ,
+                          itemCount : items . length ,
+                          itemBuilder : ( context , index ) => buildCard ( item : items [ index ] , context : context ) ,
+
+                        )
+
+                      ),
+
+                      Padding
+                      (
+
+                        padding : EdgeInsets . only ( top : 70 ),
+
+                        child : Container
+                        (
+
+                          height : 200,
+
+                          child : IconButton
+                          (
+
+                            onPressed : ( ) { },
+
+                            icon : Icon ( Icons . arrow_back_ios_sharp , color : Colors . white , size : 80 )
+
+                          )
+
+                        )
+
+                      ),
+
+                      Padding
+                      (
+
+                        padding : EdgeInsets . only ( top : 70 , left : 340 ),
+
+                        child : Container
+                        (
+
+                          height : 200,
+
+                          child : IconButton
+                          (
+
+                            onPressed : ( ) { },
+
+                            icon : Icon ( Icons . arrow_forward_ios , color : Colors . white , size : 80 )
+
+                          )
+
+                        )
+
+                      )
+
+                    ]
+
+                  )
+
+                )
+
+              ]
 
             ),
 
-            child : Container
+            Padding
             (
 
-              color : Colors . green . shade900 ,
+              padding : EdgeInsets . only ( left : 15 , right : 15 ),
 
-              child : Column
+              child : Container
               (
 
-                children :
-                [
+                child : Stack
+                (
 
-                  Container
-                  (
+                  children :
+                  [
 
-                    height : 160,
-                    color: Colors . transparent,
-
-                    child : ListView . separated
+                    Container
                     (
 
-                      padding : EdgeInsets . only ( left : 10 , right : 10 , top : 0 ) ,
-                      scrollDirection : Axis . horizontal ,
-                      separatorBuilder : ( context , _ ) => SizedBox ( width : 12) ,
-                      itemCount : items . length ,
-                      itemBuilder : ( context , index ) => buildCard ( item : items [ index ]  , context : context) ,
-
-                    )
-
-                  ) ,
-
-                  Padding
-                  (
-
-                    padding : EdgeInsets . only ( top : 15 , left : 20 , right : 20 ),
-
-                    child : Container
-                    (
+                      height : 400 ,
 
                       decoration : BoxDecoration
                       (
 
-                        border : Border . all ( color : Colors . blueAccent.shade700 , width : 15 ),
-                        borderRadius : BorderRadius . circular ( 50 )
+                        border : Border . all ( color : Colors . blueAccent . shade700 , width : 10 ),
+                        borderRadius : BorderRadius . circular ( 50 ),
+                        color : Colors.transparent
 
-                       ),
+                      ),
 
-                      height : 410,
+                      child : Padding
+                      (
 
-                      child : list_view ( ),
+                        padding : EdgeInsets . only ( top : 33 , bottom : 29 ),
+
+                        child : list_view ( )
+
+                      )
+
+                    ),
+
+                    Padding
+                    (
+
+                      padding : EdgeInsets . only (  left : 290 ),
+
+                      child : IconButton
+                      (
+
+                        onPressed : ( ) { },
+
+                        icon : Icon ( Icons . keyboard_arrow_up , color : Colors . black , size : 80 )
+
+                      )
+
+                    ),
+
+                    Padding
+                    (
+
+                      padding : EdgeInsets . only (  left : 290  , top : 320 ),
+
+                      child : IconButton
+                      (
+
+                        onPressed : ( ) { },
+
+                        icon : Icon ( Icons . keyboard_arrow_down , color : Colors . black , size : 80 )
+
+                      )
 
                     )
 
-                  )
+                  ]
 
-                ]
+                )
 
               )
 
             )
 
-          )
+          ]
 
         )
 
@@ -178,76 +287,19 @@ class _Specialties extends State< Specialties >
     );
 
   }
+  // End of build Widget
 
-  Widget buildCard ( { required Card_Item item , required BuildContext context } ) => InkWell
+  // Start of buildCard Widget
+  Widget buildCard ( { required String item , required BuildContext context } ) => InkWell
   (
 
     // Start Of On Tap
-    /*onTap : ()
+    onTap : ()
     {
 
-      // Start Of Switch
-      switch ( item.text )
-      {
+      // On_Tap ( item . text ) ;
 
-      // Start Of كلية الهندسة case
-        case "كلية الهندسة" :
-          {
-            List < String > ss = [ ] ;
-            Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => College ( title : item . text  , sp : ss ) ) , ( route ) => route . isFirst ) ;
-            break;
-          }
-      // End Of كلية الهندسة Case
-
-      // Start Of كلية العلوم Case
-        case "كلية العلوم" :
-          {
-            List < String > ss = [ ] ;
-            Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => College ( title : item . text  , sp : ss ) ) , ( route ) => route . isFirst ) ;
-            break;
-          }
-      // End Of كلية العلوم Case
-
-      // Start Of كلية تكنولوجيا المعلومات و الاتصالات Case
-        case "كلية تكنولوجيا المعلومات و الاتصالات" :
-          {
-            List < String > ss = [ ] ;
-            Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => College ( title : item . text  , sp : ss ) ) , ( route ) => route . isFirst ) ;
-            break;
-          }
-      // End Of كلية تكنولوجيا المعلومات و الاتصالات Case
-
-      // Start Of كلية الاعمال Case
-        case "كلية الاعمال" :
-          {
-            List < String > ss = [ ] ;
-            Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => College ( title : item . text  , sp : ss ) ) , ( route ) => route . isFirst ) ;
-            break;
-          }
-      // End Of كلية الاعمال case
-
-      // Start Of كلية الاداب Case
-        case "كلية الاداب" :
-          {
-            List < String > ss = [ ] ;
-            Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => College ( title : item . text  , sp : ss ) ) , ( route ) => route . isFirst ) ;
-            break;
-          }
-      // End Of كلية الاداب case
-
-      // Start Of كلية العلوم التربوية Case
-        case "كلية العلوم التربوية" :
-          {
-            List < String > ss = [ ] ;
-            Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => College ( title : item . text  , sp : ss ) ) , ( route ) => route . isFirst ) ;
-            break;
-          }
-      // End Of كلية العلوم التربوية Case
-
-      }
-      // End Of Switch
-
-    },*/
+    },
     // End Of On Tap
 
     child : Container
@@ -258,7 +310,7 @@ class _Specialties extends State< Specialties >
       decoration : BoxDecoration
       (
 
-        borderRadius : BorderRadius . circular ( 70 ),
+        borderRadius : BorderRadius . circular ( 65 ),
         image : DecorationImage
         (
 
@@ -280,16 +332,11 @@ class _Specialties extends State< Specialties >
           child : Text
           (
 
-            item . text,
+            item,
 
-            style : TextStyle
-            (
+            style : TextStyle ( color : Colors . white ),
 
-              color : Colors . white
-
-            ),
-
-            textAlign : TextAlign . center ,
+            textAlign : TextAlign . center,
 
           )
 
@@ -300,11 +347,14 @@ class _Specialties extends State< Specialties >
     )
 
   );
+  // End of buildCard Widget
 
-  Widget list_view ( ) => ListView . builder
+  // Start of list_view Widget
+  Widget list_view ( )  => ListView . builder
   (
 
-    itemCount : sp . length  ,
+    padding : EdgeInsets . only ( top : 0 ),
+    itemCount : sp . length ,
     itemBuilder : ( context , index )
     {
 
@@ -315,14 +365,22 @@ class _Specialties extends State< Specialties >
 
         onTap : ( ) { } ,
 
-        title : Text
+        title : Container
         (
 
-          item,
+          color : Colors . white,
+          padding : EdgeInsets . only ( top : 5 , bottom : 5),
 
-          style : TextStyle ( fontSize : 20 ,color: Colors.black, fontWeight : FontWeight . bold ) ,
+          child : Text
+          (
 
-          textAlign : TextAlign.  center,
+            item,
+
+            style : TextStyle ( fontSize : 18 , color : Colors . black , fontWeight : FontWeight . bold ),
+
+            textAlign : TextAlign.  center,
+
+          )
 
         )
 
@@ -331,39 +389,73 @@ class _Specialties extends State< Specialties >
     }
 
   );
+  // End of list_view Widget
 
-  Widget TxT ( { required String txt } ) =>  Padding
-  (
+  void On_Tap ( String txt )
+  {
 
-      padding : EdgeInsets.only ( bottom : 10 ),
+    // Start Of Switch
+    switch ( txt )
+    {
 
-      child : Text
-        (
+    // Start Of كلية الهندسة case
+      case "كلية الهندسة" :
+        {
+          List < String > ss = [ "الهندسة المدنية" , "هندسة القوى الكهربائية" , "هندسة الميكاترونيكس" , "الهندسة الميكانيكية/الإنتاج والآلات" , "الهندسة الميكانيكية/التكييف والتبريد والتدفئة" , "الهندسة الميكانيكية/المركبات" , "الهندسة الجيولوجية" , "هندسة الصناعات الكيميائية" , "هندسة التعدين" , "هندسة الحاسوب" , "هندسة الاتصالات والإلكترونيات" , "هندسة الطاقة المتجددة المتكاملة" , "هندسة الأنظمة الذكية" ] ;
+          Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
+          break;
+        }
+    // End Of كلية الهندسة Case
 
-          txt,
-          textAlign : TextAlign . center,
+    // Start Of كلية العلوم Case
+      case "كلية العلوم" :
+        {
+          List < String > ss = [ "الكيمياء" , "تكنولوجيا الكيمياء" , "الفيزياء التطبيقية" , "الرياضيات" , "العلوم الحياتية التطبيقية" ] ;
+          Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
+          break;
+        }
+    // End Of كلية العلوم Case
 
+    // Start Of كلية تكنولوجيا المعلومات و الاتصالات Case
+      case "كلية تكنولوجيا المعلومات و الاتصالات" :
+        {
+          List < String > ss = [ ] ;
+          Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
+          break;
+        }
+    // End Of كلية تكنولوجيا المعلومات و الاتصالات Case
 
-          style : TextStyle
-            (
+    // Start Of كلية الاعمال Case
+      case "كلية الاعمال" :
+        {
+          List < String > ss = [ "علوم مالية ومصرفية" , "إقتصاد الأعمال" , "إدارة الأعمال" , "المحاسبة" ] ;
+          Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
+          break;
+        }
+    // End Of كلية الاعمال case
 
-            fontSize : 16,
+    // Start Of كلية الاداب Case
+      case "كلية الاداب" :
+        {
+          List < String > ss = [ "اللغة العربية وآدابها" , "اللغة الإنجليزية وآدابها" ] ;
+          Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
+          break;
+        }
+    // End Of كلية الاداب case
 
-          )
+    // Start Of كلية العلوم التربوية Case
+      case "كلية العلوم التربوية" :
+        {
+          List < String > ss = [ "تربية خاصة" , "معلم صف" ] ;
+          Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
+          break;
+        }
+    // End Of كلية العلوم التربوية Case
 
-      )
+    }
+    // End Of Switch
 
-  );
+  }
 
 }
 // End Of _Specialties Class
-
-// Start Of Card_Item Class
-class Card_Item
-{
-
-  final String text ;
-  Card_Item ( { required this . text } ) ;
-
-}
-// End Of Card_Item Class

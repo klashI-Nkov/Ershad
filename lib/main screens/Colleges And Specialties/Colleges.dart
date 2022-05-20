@@ -3,7 +3,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:ershad/main screens/Colleges And Specialties/Specialties.dart';
-import 'package:ershad/main screens/Colleges And Specialties/CIS.dart';
 
 class Colleges extends StatefulWidget
 {
@@ -27,7 +26,6 @@ class _Colleges extends State < Colleges >
     "كلية الاعمال",
     "كلية الاداب",
     "كلية العلوم التربوية",
-
 
   ];
 
@@ -123,66 +121,7 @@ class _Colleges extends State < Colleges >
             onTap : ( )
             {
 
-              // Start Of Switch
-              switch ( index )
-              {
-
-              // Start Of كلية الهندسة case
-                case 0 :
-                {
-                  List < String > ss = [ "الهندسة المدنية" , "هندسة القوى الكهربائية" , "هندسة الميكاترونيكس" , "الهندسة الميكانيكية/الإنتاج والآلات" , "الهندسة الميكانيكية/التكييف والتبريد والتدفئة" , "الهندسة الميكانيكية/المركبات" , "الهندسة الجيولوجية" , "هندسة الصناعات الكيميائية" , "هندسة التعدين" , "هندسة الحاسوب" , "هندسة الاتصالات والإلكترونيات" , "هندسة الطاقة المتجددة المتكاملة" , "هندسة الأنظمة الذكية" ] ;
-                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
-                  break ;
-                }
-              // End Of كلية الهندسة Case
-
-              // Start Of كلية العلوم Case
-                case 1 :
-                {
-                  List < String > ss = [ "الكيمياء" , "تكنولوجيا الكيمياء" , "الفيزياء التطبيقية" , "الرياضيات" , "العلوم الحياتية التطبيقية" ] ;
-                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
-                  break ;
-                }
-              // End Of كلية العلوم Case
-
-              // Start Of كلية تكنولوجيا المعلومات و الاتصالات Case
-                case 2 :
-                {
-                  List < String > ss = [ ] ;
-                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => CIS () ) ) ;
-                  break ;
-                }
-              // End Of كلية تكنولوجيا المعلومات و الاتصالات Case
-
-              // Start Of كلية الاعمال Case
-                case 3 :
-                {
-                  List < String > ss = [ "علوم مالية ومصرفية" , "إقتصاد الأعمال" , "إدارة الأعمال" , "المحاسبة" ] ;
-                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
-                  break ;
-                }
-              // End Of كلية الاعمال case
-
-              // Start Of كلية الاداب Case
-                case 4 :
-                {
-                  List < String > ss = [ "اللغة العربية وآدابها" , "اللغة الإنجليزية وآدابها" ] ;
-                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
-                  break ;
-                }
-              // End Of كلية الاداب case
-
-              // Start Of كلية العلوم التربوية Case
-                case 5 :
-                {
-                  List < String > ss = [ "معلم صف" , "معلم صف" ] ;
-                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss   ) ) ) ;
-                  break ;
-                }
-            // End Of كلية العلوم التربوية Case
-
-              }
-              // End Of Switch
+              On_Tab ( index ) ;
 
             } ,
 
@@ -230,6 +169,72 @@ class _Colleges extends State < Colleges >
 
   );
   // End Of grid_view Widget
+
+  void On_Tab ( int index )
+  {
+
+    // Start Of Switch
+    switch ( index )
+    {
+
+    // Start Of كلية الهندسة case
+      case 0 :
+      {
+        List < String > ss = [ "الهندسة المدنية" , "هندسة القوى الكهربائية" , "هندسة الميكاترونيكس" , "الهندسة الميكانيكية/الإنتاج والآلات" , "الهندسة الميكانيكية/التكييف والتبريد والتدفئة" , "الهندسة الميكانيكية/المركبات" , "الهندسة الجيولوجية" , "هندسة الصناعات الكيميائية" , "هندسة التعدين" , "هندسة الحاسوب" , "هندسة الاتصالات والإلكترونيات" , "هندسة الطاقة المتجددة المتكاملة" , "هندسة الأنظمة الذكية" ] ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
+        break ;
+      }
+    // End Of كلية الهندسة Case
+
+    // Start Of كلية العلوم Case
+      case 1 :
+      {
+        List < String > ss = [ "الكيمياء" , "تكنولوجيا الكيمياء" , "الفيزياء التطبيقية" , "الرياضيات" , "العلوم الحياتية التطبيقية" ] ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
+        break ;
+      }
+    // End Of كلية العلوم Case
+
+    // Start Of كلية تكنولوجيا المعلومات و الاتصالات Case
+      case 2 :
+      {
+        List < String > ss = [ "نظم المعلومات الحاسوبية" , "حوسبة الاجهزة الذكية" , "علم الحاسوب/ الذكاء الاصطناعي وعلم البيانات" ] ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
+        break ;
+      }
+    // End Of كلية تكنولوجيا المعلومات و الاتصالات Case
+
+    // Start Of كلية الاعمال Case
+      case 3 :
+      {
+        List < String > ss = [ "علوم مالية ومصرفية" , "إقتصاد الأعمال" , "إدارة الأعمال" , "المحاسبة" ] ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
+        break ;
+      }
+    // End Of كلية الاعمال case
+
+    // Start Of كلية الاداب Case
+      case 4 :
+      {
+        List < String > ss = [ "اللغة العربية وآدابها" , "اللغة الإنجليزية وآدابها" ] ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
+        break ;
+      }
+    // End Of كلية الاداب case
+
+    // Start Of كلية العلوم التربوية Case
+      case 5 :
+      {
+        List < String > ss = [ "تربية خاصة" , "معلم صف" ] ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss   ) ) ) ;
+        break ;
+      }
+    // End Of كلية العلوم التربوية Case
+
+    }
+    // End Of Switch
+
+  }
 
 }
 // End Of _Home Class

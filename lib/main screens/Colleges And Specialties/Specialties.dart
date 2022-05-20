@@ -1,6 +1,7 @@
 
 // ignore_for_file: dead_code, must_be_immutable
 
+import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Subject/Subjects.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Home Page.dart';
@@ -230,7 +231,7 @@ class _Specialties extends State< Specialties >
                       child : Padding
                       (
 
-                        padding : EdgeInsets . only ( top : 33 , bottom : 29 ),
+                        padding : EdgeInsets . only ( top : 15 , bottom : 15 ),
 
                         child : list_view ( )
 
@@ -363,13 +364,23 @@ class _Specialties extends State< Specialties >
       return ListTile
       (
 
-        onTap : ( ) { } ,
+        onTap : ( )
+        {
+
+          String Desc = "يهدف التخصص إلى تخريج وتأهيل الطلبة على حوسبة نظم المعلومات في المجالات المختلفة المحاسبية والمالية والإدارية والطبية …الخ، والهدف منه تنمية قدرات الطالب على التخطيط والتصميم والتنفيذ والتطوير وإدارة نظم المعلومات والتي تخدم المؤسسات المختلفة كالبنوك والجامعات والمستشفيات";
+
+          List < String > subjects = [ "البرمجة المرئية" , "نظم المعلومات" , "التدريب الميداني	" , "أمن الشبكات	" ,
+          "مختبر شبكات الحاسوب	" , "الذكاء الإصطناعي	" , "نظم التشغيل	" , "الخوارزميات	" , "البرمجة الكينونية 2	" ] ;
+
+          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Subjects ( title : item , Desc : Desc , subjects : subjects ) ) ) ;
+
+        } ,
 
         title : Container
         (
 
           color : Colors . white,
-          padding : EdgeInsets . only ( top : 5 , bottom : 5),
+          padding : EdgeInsets . only ( top : 5 , bottom : 5) ,
 
           child : Text
           (
@@ -378,7 +389,7 @@ class _Specialties extends State< Specialties >
 
             style : TextStyle ( fontSize : 18 , color : Colors . black , fontWeight : FontWeight . bold ),
 
-            textAlign : TextAlign.  center,
+            textAlign : TextAlign . center,
 
           )
 

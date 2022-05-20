@@ -1,10 +1,11 @@
 
 // ignore_for_file: dead_code, must_be_immutable
 
-import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Subject/Subjects.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Home Page.dart';
+
+import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Subject/Subjects.dart';
 
 // Start Of Specialties Class
 class Specialties extends StatefulWidget
@@ -31,16 +32,7 @@ class _Specialties extends State< Specialties >
   _Specialties ( { required this . title , required this . sp } ) ;
 
   List < String > items =
-  [
-
-    "كلية الهندسة",
-    "كلية العلوم",
-    "كلية تكنولوجيا المعلومات و الاتصالات",
-    "كلية الاعمال",
-    "كلية الاداب",
-    "كلية العلوم التربوية"
-
-  ];
+  [ "كلية الهندسة" , "كلية العلوم" , "كلية تكنولوجيا المعلومات و الاتصالات" , "كلية الاعمال" , "كلية الاداب" , "كلية العلوم التربوية" ] ;
 
   // Start of build Widget
   @override
@@ -107,6 +99,7 @@ class _Specialties extends State< Specialties >
           children :
           [
 
+            // Start of Horizontal List View
             Row
             (
 
@@ -124,6 +117,7 @@ class _Specialties extends State< Specialties >
                     children :
                     [
 
+                      // Start of Horizontal List View
                       Container
                       (
 
@@ -138,12 +132,14 @@ class _Specialties extends State< Specialties >
                           scrollDirection : Axis . horizontal ,
                           separatorBuilder : ( context , _ ) => SizedBox ( width : 12) ,
                           itemCount : items . length ,
-                          itemBuilder : ( context , index ) => buildCard ( item : items [ index ] , context : context ) ,
+                          itemBuilder : ( context , index ) => Horizontal_List_View ( item : items [ index ] , context : context ) ,
 
                         )
 
                       ),
+                      // End of Horizontal List View
 
+                      // Start Of Arrow Back
                       Padding
                       (
 
@@ -166,7 +162,9 @@ class _Specialties extends State< Specialties >
                         )
 
                       ),
+                      // End Of Arrow Back
 
+                      // Start Of Arrow Forward
                       Padding
                       (
 
@@ -189,6 +187,7 @@ class _Specialties extends State< Specialties >
                         )
 
                       )
+                      // End Of Arrow Forward
 
                     ]
 
@@ -199,7 +198,9 @@ class _Specialties extends State< Specialties >
               ]
 
             ),
+            // End of Horizontal List View
 
+            // Start of List View
             Padding
             (
 
@@ -214,6 +215,33 @@ class _Specialties extends State< Specialties >
                   children :
                   [
 
+                    // Start Of تخصصات الكلية
+                    Padding
+                    (
+
+                      padding : EdgeInsets . only ( bottom : 15 , left : 120 , top : 15 ),
+
+                      child : Text
+                      (
+
+                        "تخصصات الكلية",
+                        textAlign : TextAlign . center ,
+
+                        style : TextStyle
+                        (
+
+                          fontSize : 25,
+                          fontWeight : FontWeight . bold,
+                          color : Colors . white
+
+                        )
+
+                      )
+
+                    ),
+                    // End Of تخصصات الكلية
+
+                    // STart Of List View
                     Container
                     (
 
@@ -231,18 +259,20 @@ class _Specialties extends State< Specialties >
                       child : Padding
                       (
 
-                        padding : EdgeInsets . only ( top : 15 , bottom : 15 ),
+                        padding : EdgeInsets . only ( top : 50 , bottom : 15 ),
 
-                        child : list_view ( )
+                        child : List_View ( )
 
                       )
 
                     ),
+                    // End Of List View
 
+                    // Start Of Arrow Up
                     Padding
                     (
 
-                      padding : EdgeInsets . only (  left : 290 ),
+                      padding : EdgeInsets . only (  left : 290 , top : 20  ),
 
                       child : IconButton
                       (
@@ -254,7 +284,9 @@ class _Specialties extends State< Specialties >
                       )
 
                     ),
+                    // End Of Arrow Up
 
+                    // Start Of Arrow down
                     Padding
                     (
 
@@ -270,6 +302,7 @@ class _Specialties extends State< Specialties >
                       )
 
                     )
+                    // End Of Arrow down
 
                   ]
 
@@ -278,6 +311,7 @@ class _Specialties extends State< Specialties >
               )
 
             )
+            // End of List View
 
           ]
 
@@ -290,17 +324,12 @@ class _Specialties extends State< Specialties >
   }
   // End of build Widget
 
-  // Start of buildCard Widget
-  Widget buildCard ( { required String item , required BuildContext context } ) => InkWell
+  // Start of Horizontal List View Widget
+  Widget Horizontal_List_View ( { required String item , required BuildContext context } ) => InkWell
   (
 
     // Start Of On Tap
-    onTap : ()
-    {
-
-      // On_Tap ( item . text ) ;
-
-    },
+    onTap : () { /*Build_Card_On_Tap ( item ) ;*/ },
     // End Of On Tap
 
     child : Container
@@ -348,10 +377,10 @@ class _Specialties extends State< Specialties >
     )
 
   );
-  // End of buildCard Widget
+  // End of Horizontal List View Widget
 
-  // Start of list_view Widget
-  Widget list_view ( )  => ListView . builder
+  // Start of List View Widget
+  Widget List_View ( )  => ListView . builder
   (
 
     padding : EdgeInsets . only ( top : 0 ),
@@ -364,23 +393,13 @@ class _Specialties extends State< Specialties >
       return ListTile
       (
 
-        onTap : ( )
-        {
-
-          String Desc = "يهدف التخصص إلى تخريج وتأهيل الطلبة على حوسبة نظم المعلومات في المجالات المختلفة المحاسبية والمالية والإدارية والطبية …الخ، والهدف منه تنمية قدرات الطالب على التخطيط والتصميم والتنفيذ والتطوير وإدارة نظم المعلومات والتي تخدم المؤسسات المختلفة كالبنوك والجامعات والمستشفيات";
-
-          List < String > subjects = [ "البرمجة المرئية" , "نظم المعلومات" , "التدريب الميداني	" , "أمن الشبكات	" ,
-          "مختبر شبكات الحاسوب	" , "الذكاء الإصطناعي	" , "نظم التشغيل	" , "الخوارزميات	" , "البرمجة الكينونية 2	" ] ;
-
-          Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Subjects ( title : item , Desc : Desc , subjects : subjects ) ) ) ;
-
-        } ,
+        onTap : ( ) {  List_View_On_Tap ( item ) ; },
 
         title : Container
         (
 
           color : Colors . white,
-          padding : EdgeInsets . only ( top : 5 , bottom : 5) ,
+          padding : EdgeInsets . only ( top : 5 , bottom : 5 ) ,
 
           child : Text
           (
@@ -400,9 +419,10 @@ class _Specialties extends State< Specialties >
     }
 
   );
-  // End of list_view Widget
+  // End of List View Widget
 
-  void On_Tap ( String txt )
+  // Start of Build_Card_On_Tap Function
+  void Build_Card_On_Tap ( String txt )
   {
 
     // Start Of Switch
@@ -430,7 +450,7 @@ class _Specialties extends State< Specialties >
     // Start Of كلية تكنولوجيا المعلومات و الاتصالات Case
       case "كلية تكنولوجيا المعلومات و الاتصالات" :
         {
-          List < String > ss = [ ] ;
+          List < String > ss = [ "نظم المعلومات الحاسوبية" , "حوسبة الاجهزة الذكية" , "علم الحاسوب/ الذكاء الاصطناعي وعلم البيانات" ] ;
           Navigator . of ( context ) . pushAndRemoveUntil ( MaterialPageRoute ( builder : ( context ) => Specialties ( title : txt  , sp : ss ) ) , ( route ) => route.isFirst ) ;
           break;
         }
@@ -467,6 +487,19 @@ class _Specialties extends State< Specialties >
     // End Of Switch
 
   }
+  // End of Build_Card_On_Tap Function
+
+  // Start of List_View_On_Tap Function
+  void List_View_On_Tap ( final item )
+  {
+    String Desc = "يهدف التخصص إلى تخريج وتأهيل الطلبة على حوسبة نظم المعلومات في المجالات المختلفة المحاسبية والمالية والإدارية والطبية …الخ، والهدف منه تنمية قدرات الطالب على التخطيط والتصميم والتنفيذ والتطوير وإدارة نظم المعلومات والتي تخدم المؤسسات المختلفة كالبنوك والجامعات والمستشفيات";
+
+    List < String > subjects = [ "البرمجة المرئية" , "نظم المعلومات" , "التدريب الميداني	" , "أمن الشبكات	" ,
+      "مختبر شبكات الحاسوب	" , "الذكاء الإصطناعي	" , "نظم التشغيل	" , "الخوارزميات	" , "البرمجة الكينونية 2	" ] ;
+
+    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Subjects ( title : item , Desc : Desc , subjects : subjects ) ) ) ;
+  }
+  // End of List_View_On_Tap Function
 
 }
 // End Of _Specialties Class

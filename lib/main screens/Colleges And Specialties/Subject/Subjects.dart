@@ -92,12 +92,14 @@ class _Subjects extends State < Subjects >
           children :
           [
 
+            // Start Of Description
             Stack
             (
 
               children :
               [
 
+                // Start Of Description Text
                 Padding
                 (
 
@@ -120,24 +122,61 @@ class _Subjects extends State < Subjects >
                     child : Padding
                     (
 
-                      padding : EdgeInsets . only ( top : 20 , left : 20 , right : 20 , bottom : 8 ),
+                      padding : EdgeInsets . only ( top : 15 , left : 20 , right : 20 , bottom : 8 ),
 
                       child : SingleChildScrollView
                       (
 
-                        child : Text
+                        child : Column
                         (
 
-                          Desc,
-                          textAlign : TextAlign . right ,
-                          style : TextStyle
-                          (
+                          children :
+                          [
 
-                            fontSize : 20,
-                            fontWeight : FontWeight . bold,
-                            color : Colors . white
+                            // Start Of نبذه عن التخصص
+                            Padding
+                            (
 
-                          )
+                              padding : EdgeInsets . only ( bottom : 15  ),
+
+                              child : Text
+                              (
+
+                                "نبذة عن التخصص",
+                                textAlign : TextAlign . center ,
+
+                                style : TextStyle
+                                (
+
+                                  fontSize : 25,
+                                  fontWeight : FontWeight . bold,
+                                  color : Colors . white
+
+                                ),
+
+                              ),
+                            ),
+                            // End Of نبذه عن التخصص
+
+                            // Start Of Description Text
+                            Text
+                            (
+
+                              Desc,
+                              textAlign : TextAlign . right ,
+                              style : TextStyle
+                              (
+
+                                fontSize : 20,
+                                fontWeight : FontWeight . bold,
+                                color : Colors . white
+
+                              )
+
+                            )
+                            // End Of Description Text
+
+                          ]
 
                         )
 
@@ -148,7 +187,9 @@ class _Subjects extends State < Subjects >
                   )
 
                 ),
+                // End Of Description Text
 
+                // Start Of Arrow Up
                 Padding
                 (
 
@@ -164,7 +205,9 @@ class _Subjects extends State < Subjects >
                   )
 
                 ),
+                // End Of Arrow Up
 
+                // Start Of Arrow down
                 Padding
                 (
 
@@ -180,11 +223,14 @@ class _Subjects extends State < Subjects >
                   )
 
                 )
+                // End Of Arrow down
 
               ]
 
             ),
+            // End Of Description
 
+            // STart Of List View
             Padding
             (
 
@@ -199,11 +245,36 @@ class _Subjects extends State < Subjects >
                   children :
                   [
 
+                    // Start Of مواد التخصص الاجبارية
+                    Padding
+                    (
+
+                      padding : EdgeInsets . only ( bottom : 15 , left : 75 , top : 15 ),
+
+                      child : Text
+                        (
+
+                        "مواد التخصص الاجبارية",
+                        textAlign : TextAlign . center ,
+
+                        style : TextStyle
+                          (
+
+                            fontSize : 25,
+                            fontWeight : FontWeight . bold,
+                            color : Colors . white
+
+                        ),
+
+                      ),
+                    ),
+                    // End Of مواد التخصص الاجبارية
+
                     // STart Of List View
                     Container
                     (
 
-                      height : 200 ,
+                      height : 305 ,
 
                       decoration : BoxDecoration
                       (
@@ -217,7 +288,7 @@ class _Subjects extends State < Subjects >
                       child : Padding
                       (
 
-                        padding : EdgeInsets . only ( top : 15 , bottom : 15 ),
+                        padding : EdgeInsets . only ( top : 45 , bottom : 15 ),
 
                         child : list_view ( )
 
@@ -226,6 +297,7 @@ class _Subjects extends State < Subjects >
                     ),
                     // End Of List View
 
+                    // Start Of Arrow Up
                     Padding
                     (
 
@@ -241,11 +313,13 @@ class _Subjects extends State < Subjects >
                       )
 
                     ),
+                    // End Of Arrow Up
 
-                    /*Padding
+                    // Start Of Arrow down
+                    Padding
                     (
 
-                      padding : EdgeInsets . only (  left : 290  , top : 320 ),
+                      padding : EdgeInsets . only (  left : 290  , top : 230 ),
 
                       child : IconButton
                       (
@@ -256,7 +330,8 @@ class _Subjects extends State < Subjects >
 
                       )
 
-                    )*/
+                    )
+                    // End Of Arrow down
 
                   ]
 
@@ -265,6 +340,7 @@ class _Subjects extends State < Subjects >
               )
 
           )
+            // End Of List View
 
           ]
 
@@ -291,11 +367,7 @@ class _Subjects extends State < Subjects >
       return ListTile
       (
 
-        onTap : ( )
-        {
-
-
-        } ,
+        onTap : ( ) { },
 
         title : Container
         (
@@ -322,6 +394,18 @@ class _Subjects extends State < Subjects >
 
   );
   // End of list_view Widget
+
+// Start of List_View_On_Tap Function
+  void List_View_On_Tap ( final item )
+  {
+    String Desc = "يهدف التخصص إلى تخريج وتأهيل الطلبة على حوسبة نظم المعلومات في المجالات المختلفة المحاسبية والمالية والإدارية والطبية …الخ، والهدف منه تنمية قدرات الطالب على التخطيط والتصميم والتنفيذ والتطوير وإدارة نظم المعلومات والتي تخدم المؤسسات المختلفة كالبنوك والجامعات والمستشفيات";
+
+    List < String > subjects = [ "البرمجة المرئية" , "نظم المعلومات" , "التدريب الميداني	" , "أمن الشبكات	" ,
+      "مختبر شبكات الحاسوب	" , "الذكاء الإصطناعي	" , "نظم التشغيل	" , "الخوارزميات	" , "البرمجة الكينونية 2	" ] ;
+
+    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Subjects ( title : item , Desc : Desc , subjects : subjects ) ) ) ;
+  }
+// End of List_View_On_Tap Function
 
 }
 // End Of _Subjects Class

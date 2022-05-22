@@ -30,7 +30,7 @@ class _Home extends State < Home >
 
   // Start Of build Widget
   @override
-  Widget build(BuildContext context)
+  Widget build ( BuildContext context )
   {
 
     return Scaffold
@@ -44,7 +44,7 @@ class _Home extends State < Home >
         title  : Text
         (
 
-          "الرئيسة" ,
+          "الرئيسة",
 
           style : TextStyle
           (
@@ -57,13 +57,13 @@ class _Home extends State < Home >
 
         ),
 
-        backgroundColor : Colors . transparent ,
-        elevation : 0 ,
-        centerTitle : true ,
+        backgroundColor : Colors . transparent,
+        elevation : 0,
+        centerTitle : true,
 
       ),
 
-      body : Expanded
+      body : SingleChildScrollView
       (
 
         child : Container
@@ -158,18 +158,8 @@ class _Home extends State < Home >
   }
   // End Of build Widget
 
-  Widget sdfa
-      ( {
-          required String text ,
-          required double size ,
-          required BorderRadius Container_Border_Radius ,
-          required Border Container_Border ,
-          required BorderRadius Material_Border_Radius,
-          required double top ,
-          required double left,
-
-      } ) =>
-  Opacity
+  Widget sdfa ( { required String text , required double size , required BorderRadius Container_Border_Radius , required Border Container_Border ,
+  required BorderRadius Material_Border_Radius , required double top , required double left } ) => Opacity
   (
     opacity : 0.7 ,
     child : Row
@@ -246,7 +236,7 @@ class _Home extends State < Home >
                         child : Padding
                         (
 
-                            padding :  EdgeInsets . only ( top : top , left : left  ),
+                            padding :  EdgeInsets . only ( top : top , left : left ),
 
                             child : Text
                             (
@@ -278,5 +268,6 @@ class _Home extends State < Home >
 
   )
   );
+
 }
 // End Of _Home Class

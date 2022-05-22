@@ -1,6 +1,10 @@
 // ignore_for_file: must_be_immutable
 
+
+
 import 'package:flutter/material.dart';
+
+import 'package:ershad/main screens/Colleges And Specialties/Subject/Subject.dart';
 
 import 'package:ershad/main screens/Home Page.dart';
 
@@ -30,7 +34,7 @@ class _Subjects extends State < Subjects >
 
   // Start of build Widget
   @override
-  Widget build(BuildContext context)
+  Widget build ( BuildContext context )
   {
     return Scaffold
     (
@@ -56,9 +60,9 @@ class _Subjects extends State < Subjects >
 
         ),
 
-        backgroundColor : Colors . green . shade900 ,
-        elevation : 0 ,
-        centerTitle : true ,
+        backgroundColor : Colors . green . shade900,
+        elevation : 0,
+        centerTitle : true,
 
         actions :
         [
@@ -367,7 +371,7 @@ class _Subjects extends State < Subjects >
       return ListTile
       (
 
-        onTap : ( ) { },
+        onTap : ( ) { List_View_On_Tap ( item ) ; },
 
         title : Container
         (
@@ -398,12 +402,17 @@ class _Subjects extends State < Subjects >
 // Start of List_View_On_Tap Function
   void List_View_On_Tap ( final item )
   {
-    String Desc = "يهدف التخصص إلى تخريج وتأهيل الطلبة على حوسبة نظم المعلومات في المجالات المختلفة المحاسبية والمالية والإدارية والطبية …الخ، والهدف منه تنمية قدرات الطالب على التخطيط والتصميم والتنفيذ والتطوير وإدارة نظم المعلومات والتي تخدم المؤسسات المختلفة كالبنوك والجامعات والمستشفيات";
 
-    List < String > subjects = [ "البرمجة المرئية" , "نظم المعلومات" , "التدريب الميداني	" , "أمن الشبكات	" ,
-      "مختبر شبكات الحاسوب	" , "الذكاء الإصطناعي	" , "نظم التشغيل	" , "الخوارزميات	" , "البرمجة الكينونية 2	" ] ;
+    Navigator. push ( context , MaterialPageRoute ( builder : ( context ) => Subject
+      (
+        "مختبر قواعد البيانات" ,
+        "0601242" ,
+        "هذا المساق هو عبارة عن استكمال او الاصح تطبيق ما تم دراسته في مساق قواعد البيانات وبشكل مختصر هذا المساق يتحدث عن كيفية انشاء قواعد البيانات",
+        "قواعد البيانات ( 0601241 )" ,
+        "كلية تكنولوجيا المعلومات والاتصالات",
+        "fdfdf"
+    ),) );
 
-    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Subjects ( title : item , Desc : Desc , subjects : subjects ) ) ) ;
   }
 // End of List_View_On_Tap Function
 

@@ -31,7 +31,7 @@ class _Colleges extends State < Colleges >
 
   // Start Of build Widget
   @override
-  Widget build(BuildContext context)
+  Widget build ( BuildContext context )
   {
 
     return Scaffold
@@ -44,11 +44,11 @@ class _Colleges extends State < Colleges >
 
         title  : Padding
         (
-          padding : EdgeInsets . only ( top : 20 ) ,
+          padding : EdgeInsets . only ( top : 20 ),
           child : Text
           (
 
-            "الكليات" ,
+            "الكليات",
 
             style : TextStyle
             (
@@ -65,9 +65,9 @@ class _Colleges extends State < Colleges >
 
         ),
 
-        backgroundColor : Colors . transparent ,
-        elevation : 0 ,
-        centerTitle : true ,
+        backgroundColor : Colors . transparent,
+        elevation : 0,
+        centerTitle : true,
 
       ),
 
@@ -76,7 +76,7 @@ class _Colleges extends State < Colleges >
 
         padding : EdgeInsets . only ( top : 15 , right : 5 , left : 5 ),
         color : Colors . green . shade900,
-        child : grid_view ( )
+        child : Grid_View ( )
 
       )
 
@@ -85,20 +85,20 @@ class _Colleges extends State < Colleges >
   }
   // End Of build Widget
 
-  // Start Of grid_view Widget
-  Widget grid_view ( ) => GridView . builder
+  // Start Of Grid View Widget
+  Widget Grid_View ( ) => GridView . builder
   (
 
     gridDelegate : SliverGridDelegateWithFixedCrossAxisCount
     (
 
       crossAxisCount : 2,
-      crossAxisSpacing : 10 ,
-      mainAxisSpacing : 60
+      crossAxisSpacing : 10,
+      mainAxisSpacing : 20
 
     ),
 
-    itemCount : items . length ,
+    itemCount : items . length,
     itemBuilder : ( context , index )
 
     {
@@ -113,7 +113,7 @@ class _Colleges extends State < Colleges >
 
           color : Colors . black,
           borderRadius : BorderRadius . circular ( 75 ),
-          clipBehavior : Clip . antiAliasWithSaveLayer ,
+          clipBehavior : Clip . antiAliasWithSaveLayer,
 
           child : InkWell
           (
@@ -121,9 +121,9 @@ class _Colleges extends State < Colleges >
             onTap : ( )
             {
 
-              On_Tab ( index ) ;
+              Grid_View_On_Tap ( index ) ;
 
-            } ,
+            },
 
             child : Image
             (
@@ -157,7 +157,7 @@ class _Colleges extends State < Colleges >
 
             ),
 
-            textAlign : TextAlign . center ,
+            textAlign : TextAlign . center,
 
           )
 
@@ -168,9 +168,10 @@ class _Colleges extends State < Colleges >
     }
 
   );
-  // End Of grid_view Widget
+  // End Of Grid View Widget
 
-  void On_Tab ( int index )
+  // Start of Grid_View_On_Tap Function
+  void Grid_View_On_Tap ( int index )
   {
 
     // Start Of Switch
@@ -226,7 +227,7 @@ class _Colleges extends State < Colleges >
       case 5 :
       {
         List < String > ss = [ "تربية خاصة" , "معلم صف" ] ;
-        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss   ) ) ) ;
+        Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Specialties ( title : items [ index ] , sp : ss ) ) ) ;
         break ;
       }
     // End Of كلية العلوم التربوية Case
@@ -235,6 +236,7 @@ class _Colleges extends State < Colleges >
     // End Of Switch
 
   }
+  // End of Grid_View_On_Tap Function
 
 }
 // End Of _Home Class

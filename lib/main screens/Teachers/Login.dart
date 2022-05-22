@@ -37,9 +37,9 @@ class _Login extends State < Login >
 
         title : Text ( "Teachers Login Page" ),
 
-        backgroundColor : Colors . transparent ,
-        elevation : 0 ,
-        centerTitle : true ,
+        backgroundColor : Colors . transparent,
+        elevation : 0,
+        centerTitle : true,
 
         actions :
         [

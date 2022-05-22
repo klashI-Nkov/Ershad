@@ -27,7 +27,7 @@ class _Specialties extends State< Specialties >
 {
 
   final String title ;
-  final List < String > sp  ;
+  final List < String > sp ;
 
   _Specialties ( { required this . title , required this . sp } ) ;
 
@@ -329,7 +329,7 @@ class _Specialties extends State< Specialties >
   (
 
     // Start Of On Tap
-    onTap : () { /*Build_Card_On_Tap ( item ) ;*/ },
+    onTap : () { /*Horizontal_List_View_On_Tap ( item ) ;*/ },
     // End Of On Tap
 
     child : Container
@@ -388,7 +388,7 @@ class _Specialties extends State< Specialties >
     itemBuilder : ( context , index )
     {
 
-      final item = sp [ index ] ;
+      String item = sp [ index ] ;
 
       return ListTile
       (
@@ -421,8 +421,8 @@ class _Specialties extends State< Specialties >
   );
   // End of List View Widget
 
-  // Start of Build_Card_On_Tap Function
-  void Build_Card_On_Tap ( String txt )
+  // Start of Horizontal List View Function
+  void Horizontal_List_View_On_Tap ( String txt )
   {
 
     // Start Of Switch
@@ -487,10 +487,10 @@ class _Specialties extends State< Specialties >
     // End Of Switch
 
   }
-  // End of Build_Card_On_Tap Function
+  // End of Horizontal List View Function
 
-  // Start of List_View_On_Tap Function
-  void List_View_On_Tap ( final item )
+  // Start of List View On Tap Function
+  void List_View_On_Tap ( String item )
   {
     String Desc = "يهدف التخصص إلى تخريج وتأهيل الطلبة على حوسبة نظم المعلومات في المجالات المختلفة المحاسبية والمالية والإدارية والطبية …الخ، والهدف منه تنمية قدرات الطالب على التخطيط والتصميم والتنفيذ والتطوير وإدارة نظم المعلومات والتي تخدم المؤسسات المختلفة كالبنوك والجامعات والمستشفيات";
 
@@ -499,7 +499,7 @@ class _Specialties extends State< Specialties >
 
     Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Subjects ( title : item , Desc : Desc , subjects : subjects ) ) ) ;
   }
-  // End of List_View_On_Tap Function
+  // End of List View On Tap Function
 
 }
 // End Of _Specialties Class

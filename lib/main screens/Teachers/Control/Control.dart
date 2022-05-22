@@ -83,7 +83,7 @@ class _Control extends State < Control >
 
               child : InkWell
               (
-                onTap : ( ) {} ,
+                onTap : ( ) {},
 
                 child : Material
                 (
@@ -91,7 +91,7 @@ class _Control extends State < Control >
                   child : Ink . image
                   (
 
-                    image : NetworkImage ( "https://cdn.mosoah.com/wp-content/uploads/2019/07/20134500/%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D9%85%D8%AF%D8%B1%D8%B3%D9%8A%D9%86-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A.jpg" ) ,
+                    image : NetworkImage ( "https://cdn.mosoah.com/wp-content/uploads/2019/07/20134500/%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D9%85%D8%AF%D8%B1%D8%B3%D9%8A%D9%86-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A.jpg" ),
                     width : 410,
                     fit : BoxFit . cover,
 
@@ -108,18 +108,18 @@ class _Control extends State < Control >
                         child : Container
                         (
 
-                          color : Colors . black ,
+                          color : Colors . black,
 
                           child : Text
                           (
 
                             "إضافة أو تعديل بيانات المدرس",
-                            textAlign : TextAlign . center ,
+                            textAlign : TextAlign . center,
 
                             style : TextStyle
                             (
                               
-                              fontSize : 35 ,
+                              fontSize : 35,
                               fontWeight : FontWeight . bold,
                               color : Colors . white
 
@@ -145,7 +145,7 @@ class _Control extends State < Control >
               child : InkWell
               (
 
-                onTap : ( ) { } ,
+                onTap : ( ) { },
 
                 child : Material
                 (
@@ -153,9 +153,9 @@ class _Control extends State < Control >
                   child : Ink.image
                   (
 
-                    image : NetworkImage ( "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe5nhRn8KuW4FOuImeln5gyOe9wXOSuzYQEg&usqp=CAU" ) ,
+                    image : NetworkImage ( "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe5nhRn8KuW4FOuImeln5gyOe9wXOSuzYQEg&usqp=CAU" ),
                     fit : BoxFit . fill,
-                    width : 410 ,
+                    width : 410,
 
                     child : Padding
                     (
@@ -170,18 +170,18 @@ class _Control extends State < Control >
                         child : Container
                         (
 
-                          color : Colors . black ,
+                          color : Colors . black,
 
                           child : Text
                           (
 
                             "إضافة أو تعديل بيانات مادة",
-                            textAlign : TextAlign . center ,
+                            textAlign : TextAlign . center,
 
                             style : TextStyle
                             (
 
-                              fontSize : 35 ,
+                              fontSize : 35,
                               fontWeight : FontWeight . bold,
                               color : Colors . white
 
@@ -221,12 +221,12 @@ class _Control extends State < Control >
     (
 
         crossAxisCount : 2,
-        crossAxisSpacing : 10 ,
+        crossAxisSpacing : 10,
         mainAxisSpacing : 60
 
     ),
 
-    itemCount : items . length ,
+    itemCount : items . length,
     itemBuilder : ( context , index )
 
     {
@@ -241,17 +241,12 @@ class _Control extends State < Control >
 
           color : Colors . black,
           borderRadius : BorderRadius . circular ( 75 ),
-          clipBehavior : Clip . antiAliasWithSaveLayer ,
+          clipBehavior : Clip . antiAliasWithSaveLayer,
 
           child : InkWell
           (
 
-            onTap : ( )
-            {
-
-
-
-            } ,
+            onTap : ( ) { },
 
             child : Image
             (
@@ -285,7 +280,7 @@ class _Control extends State < Control >
 
             ),
 
-            textAlign : TextAlign . center ,
+            textAlign : TextAlign . center,
 
           )
 

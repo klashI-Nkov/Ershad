@@ -26,9 +26,9 @@ class _Map extends State < Map >
       (
 
         title : Text ( "map" ),
-        backgroundColor : Colors . transparent ,
-        elevation : 0 ,
-        centerTitle : true ,
+        backgroundColor : Colors . transparent,
+        elevation : 0,
+        centerTitle : true,
 
       ),
 
@@ -38,7 +38,7 @@ class _Map extends State < Map >
         child : Container
         (
 
-          color : Colors . green .shade900 ,
+          color : Colors . green .shade900,
 
         )
 

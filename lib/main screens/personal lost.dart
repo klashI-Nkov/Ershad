@@ -13,7 +13,7 @@ class _Personal_Lost extends State < Personal_Lost >
 {
 
   @override
-  Widget build(BuildContext context)
+  Widget build ( BuildContext context )
   {
 
     return Scaffold
@@ -24,9 +24,9 @@ class _Personal_Lost extends State < Personal_Lost >
         (
 
           title : Text ( "Personal Lost" ),
-          backgroundColor : Colors . transparent ,
-          elevation : 0 ,
-          centerTitle : true ,
+          backgroundColor : Colors . transparent,
+          elevation : 0,
+          centerTitle : true,
 
         ),
 
@@ -36,7 +36,7 @@ class _Personal_Lost extends State < Personal_Lost >
           child : Container
           (
 
-            color : Colors . green . shade900 ,
+            color : Colors . green . shade900,
 
           )
 

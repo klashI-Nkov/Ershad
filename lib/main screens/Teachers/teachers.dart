@@ -1,10 +1,6 @@
-// Done
-
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 
-import 'package:ershad/main screens/Teachers/Doctors.dart';
+import 'package:ershad/main screens/Teachers/Colleges_Doctors.dart';
 
 import 'package:ershad/main screens/Teachers/Login.dart';
 
@@ -57,73 +53,68 @@ class _Teachers extends State < Teachers >
 
       ),
 
-      body : Expanded
+      body : Container
       (
 
-        child : Container
+        color : Colors . green . shade900,
+
+        child : Column
         (
+            mainAxisAlignment : MainAxisAlignment . spaceEvenly,
+          children :
+          [
 
-          color : Colors . green . shade900,
+            Expanded
+            (
 
-          child : Column
-          (
-              mainAxisAlignment : MainAxisAlignment . spaceEvenly,
-            children :
-            [
+              flex : 5,
 
-              Expanded
+              child: InkWell
               (
+                onTap : ( )
+                {
 
-                flex : 5,
+                  Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Login ( ) ) ) ;
 
-                child: InkWell
+                },
+
+                child : Material
                 (
-                  onTap : ( )
-                  {
 
-                    Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => Login ( ) ) ) ;
-
-                  },
-
-                  child : Material
+                  child : Ink . image
                   (
 
-                    child : Ink . image
+                    image : NetworkImage ( "https://cdn.mosoah.com/wp-content/uploads/2019/07/20134500/%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D9%85%D8%AF%D8%B1%D8%B3%D9%8A%D9%86-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A.jpg" ),
+                    width : 410,
+                    fit : BoxFit . fill,
+
+                    child : Padding
                     (
 
-                      image : NetworkImage ( "https://cdn.mosoah.com/wp-content/uploads/2019/07/20134500/%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D9%85%D8%AF%D8%B1%D8%B3%D9%8A%D9%86-%D9%81%D9%8A-%D8%AF%D8%A8%D9%8A.jpg" ),
-                      width : 410,
-                      fit : BoxFit . fill,
+                      padding : EdgeInsets . only ( top : 280 ),
 
-                      child : Padding
+                      child : Opacity
                       (
 
-                        padding : EdgeInsets . only ( top : 280 ),
+                        opacity : 0.6,
 
-                        child : Opacity
+                        child : Container
                         (
 
-                          opacity : 0.6,
+                          color : Colors . black,
 
-                          child : Container
+                          child : Text
                           (
 
-                            color : Colors . black,
+                            "مُدرس",
+                            textAlign : TextAlign . center,
 
-                            child : Text
+                            style : TextStyle
                             (
 
-                              "مُدرس",
-                              textAlign : TextAlign . center,
-
-                              style : TextStyle
-                              (
-
-                                fontSize : 35,
-                                fontWeight : FontWeight . bold,
-                                color : Colors . white,
-
-                              )
+                              fontSize : 35,
+                              fontWeight : FontWeight . bold,
+                              color : Colors . white,
 
                             )
 
@@ -139,77 +130,77 @@ class _Teachers extends State < Teachers >
 
                 )
 
-              ),
-
-              Expanded
-              (
-
-                  flex : 5,
-
-                  child : InkWell
-                    (
-
-                      onTap : ( ) { Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => colleges ( ) ) ) ; },
-
-                      child : Material
-                        (
-
-                          child : Ink.image
-                            (
-
-                              image : NetworkImage ( "https://www.aljazeera.net/wp-content/uploads/2020/07/%D8%B5%D9%88%D8%B1%D8%A9-%D9%85%D9%8A%D8%AF%D8%A7%D9%86-2020-07-28T025900.778.png?resize=770%2C513" ),
-                              fit : BoxFit . fill,
-                              width : 410,
-
-                              child : Padding
-                                (
-
-                                  padding : EdgeInsets . only ( top : 280 ),
-
-                                  child : Opacity
-                                    (
-
-                                      opacity : 0.6,
-
-                                      child : Container
-                                        (
-
-                                          color : Colors . black,
-
-                                          child : Text
-                                            (
-
-                                              "طالب",
-                                              textAlign : TextAlign . center,
-
-                                              style : TextStyle
-                                                (
-
-                                                  fontSize : 35,
-                                                  fontWeight : FontWeight . bold,
-                                                  color : Colors . white
-
-                                              )
-
-                                          )
-
-                                      )
-
-                                  )
-
-                              )
-
-                          )
-
-                      )
-
-                  )
-
               )
 
-            ]
+            ),
 
-          )
+            Expanded
+            (
+
+                flex : 5,
+
+                child : InkWell
+                  (
+
+                    onTap : ( ) { Navigator . push ( context , MaterialPageRoute ( builder : ( _ ) => colleges ( ) ) ) ; },
+
+                    child : Material
+                      (
+
+                        child : Ink.image
+                          (
+
+                            image : NetworkImage ( "https://www.aljazeera.net/wp-content/uploads/2020/07/%D8%B5%D9%88%D8%B1%D8%A9-%D9%85%D9%8A%D8%AF%D8%A7%D9%86-2020-07-28T025900.778.png?resize=770%2C513" ),
+                            fit : BoxFit . fill,
+                            width : 410,
+
+                            child : Padding
+                              (
+
+                                padding : EdgeInsets . only ( top : 280 ),
+
+                                child : Opacity
+                                  (
+
+                                    opacity : 0.6,
+
+                                    child : Container
+                                      (
+
+                                        color : Colors . black,
+
+                                        child : Text
+                                          (
+
+                                            "طالب",
+                                            textAlign : TextAlign . center,
+
+                                            style : TextStyle
+                                              (
+
+                                                fontSize : 35,
+                                                fontWeight : FontWeight . bold,
+                                                color : Colors . white
+
+                                            )
+
+                                        )
+
+                                    )
+
+                                )
+
+                            )
+
+                        )
+
+                    )
+
+                )
+
+            )
+
+          ]
 
         )
 

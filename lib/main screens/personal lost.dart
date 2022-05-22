@@ -30,15 +30,10 @@ class _Personal_Lost extends State < Personal_Lost >
 
         ),
 
-        body : Expanded
+        body : Container
         (
 
-          child : Container
-          (
-
-            color : Colors . green . shade900,
-
-          )
+          color : Colors . green . shade900,
 
         )
 

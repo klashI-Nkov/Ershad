@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Home Page.dart';
 
-import 'package:ershad/main%20screens/Colleges%20And%20Specialties/Subject/Subjects.dart';
+import 'package:ershad/main screens/Colleges And Specialties/Subject/Subjects.dart';
 
 // Start Of Specialties Class
 class Specialties extends StatefulWidget
@@ -17,13 +17,13 @@ class Specialties extends StatefulWidget
   Specialties ( { required this . title ,  required this . sp } ) ;
 
   @override
-  State< Specialties > createState ( ) => _Specialties ( title : title , sp :  sp ) ;
+  State < Specialties > createState ( ) => _Specialties ( title : title , sp :  sp ) ;
 
 }
 // End Of Specialties Class
 
 // Start Of _Specialties Class
-class _Specialties extends State< Specialties >
+class _Specialties extends State < Specialties >
 {
 
   final String title ;

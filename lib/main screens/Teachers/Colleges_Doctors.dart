@@ -1,8 +1,5 @@
-import 'package:ershad/main%20screens/Home%20Page.dart';
-
-
-
 import 'package:flutter/material.dart';
+import 'package:ershad/main screens/Home Page.dart';
 
 // Start Of Doctors Class
 class Colleges_Doctors extends StatefulWidget

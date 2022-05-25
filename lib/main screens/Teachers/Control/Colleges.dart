@@ -2,7 +2,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:ershad/main screens/Teachers/Control/Specialties.dart';
+import 'package:ershad/main%20screens/Teachers/Control/Specialties.dart';
 
 class Colleges extends StatefulWidget
 {

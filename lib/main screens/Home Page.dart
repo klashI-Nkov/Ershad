@@ -10,7 +10,7 @@ import 'package:ershad/main screens/Colleges And Specialties/Colleges.dart';
 
 import 'package:ershad/main screens/Teachers/teachers.dart';
 
-import 'package:ershad/main screens/map.dart';
+import 'package:ershad/main%20screens/Map/Map.dart';
 
 import 'package:ershad/main screens/personal lost.dart';
 

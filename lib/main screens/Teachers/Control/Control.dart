@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ershad/main screens/Home Page.dart';
 
-import 'package:ershad/main screens/Teachers/Control/Colleges.dart';
+import 'package:ershad/main%20screens/Teachers/Control/Colleges.dart';
 
 // Start Of Control Class
 class Control extends StatefulWidget
